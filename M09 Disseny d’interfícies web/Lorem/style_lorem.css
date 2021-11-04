@@ -1,0 +1,37 @@
+label {
+    position: absolute;
+    top:0;
+    left:0;    
+    text-align: center;
+    opacity: 0.5;
+    padding-top: 5px;
+    background: white;
+    width: 200px;
+    font-size: 20px;
+    font-weight: bolder;
+    font-variant: small-caps;
+}
+
+.item {
+    position: relative;
+    box-shadow: 3px 4px 8px #888888;
+    width: 200px;
+    height: 199px;
+}
+
+.butons {
+    width: 200px;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    text-align: center;
+}
+
+input {
+    width: 20px;
+    border-radius: 50%;
+}
+
+.item {
+    margin-bottom: 20px;
+}

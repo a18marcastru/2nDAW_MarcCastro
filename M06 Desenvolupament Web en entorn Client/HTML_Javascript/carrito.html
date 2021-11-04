@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="form">
+
+        <div id="p10">
+
+            <div>Articulo 1</div><img src="https://picsum.photos/100?blur&random=1" alt=""><br><button class="afegir">+</button><input type="text" id="ip10" value="0"><button class="treure">-</button>
+
+        </div>
+
+            <div id="p20"><div>Articulo 2</div><img src="https://picsum.photos/100?blur&random=2" alt=""><br><button class="afegir">+</button><input type="text" id="ip20" value="0"><button class="treure">-</button></div>
+
+            <div id="p30"><div>Articulo 3</div><img src="https://picsum.photos/100?blur&random=3" alt=""><br><button class="afegir">+</button><input type="text" id="ip30" value="0"><button class="treure">-</button></div>
+
+            <div id="p40"><div>Articulo 4</div><img src="https://picsum.photos/100?blur&random=4" alt=""><br><button class="afegir">+</button><input type="text" id="ip40" value="0"><button class="treure">-</button></div>
+
+            <div id="p50"><div>Articulo 5</div><img src="https://picsum.photos/100?blur&random=5" alt=""><br><button class="afegir">+</button><input type="text" id="ip50" value="0"><button class="treure">-</button></div>
+
+            <div id="p50"><div>Articulo 6</div><img src="https://picsum.photos/100?blur&random=5" alt=""><br><input type="number" id="ip50" value="0"></div>
+            <input id="prodId" name="prodId" type="hidden" value="{[JSON]}">
+    </div>
+
+    <script>
+    
+    const datos = {nproductos: 5, productos: [
+                                    {id:0, nombre:"silla", precio:15},
+                                    {id:1, nombre:"monitor", precio:19},
+                                    {id:2, nombre:"teclado", precio:20},
+                                    {id:3, nombre:"raton", precio:30},
+                                    {id:4, nombre:"cascos", precio:25}
+    ]};
+    
+    let gallery = document.getElementById('form');
+
+    gallery.addEventListener('click', e => {
+        if(e.target.classList.contains('afegir')){
+            //Imprimo el ID del padre de quien ha generadp el evento
+            console.log(e.target.parentNode.id);
+            console.log("Has fet un afegir");
+            console.log(e.target);
+
+            afegir(e.target.parentNode.id);
+        }
+        else if(e.target.classList.contains('treure')){
+            console.log("Has fet un treure");
+            
+            treure(e.target.parentNode.id);
+        }
+        
+        function afegir(idProducto){
+            document.getElementById("i"+idProducto).value++;
+
+            //alert("Has añadido un elemento de un articulo"+idProducto);
+        }
+        function treure(idProducto){
+            if(document.getElementById("i"+idProducto).value>0){
+                document.getElementById("i"+idProducto).value--;
+        
+            }
+            if(document.getElementById("i"+idProducto).value==0){
+                alert("No tienes ningun articulo");
+            }
+        }
+        function actualizarCarrito(){
+            htmlStr = "";
+            linputs = document.querySelectorAll("input[type='text']");
+            for(let index = 0;index < linputs.length;index++){
+                const element = linputs[index];
+                if(element.value>0){
+                    htmlStr+="Producto"+datos.productos[index].nombre +
+                    " --> " + element.value + " unidades a " + datos.productos +
+                    " Total linea: " + datos.productos 
+                }
+            }
+            document.getElementById("listado").innerHTML = htmlStr;
+        }
+    });
+
+
+    </script>
+
+</body>
+
+</html>

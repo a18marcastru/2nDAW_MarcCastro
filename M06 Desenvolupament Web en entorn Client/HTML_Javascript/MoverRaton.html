@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 500px;
+            height: 400px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div onmousemove="move(event)" onmouseout="clearmove()">
+        <p id="coorX"></p>
+        <p id="coorY"></p>
+    </div>
+    
+    <script>
+        function move(e){
+            console.log("Me has movido: " + e.clientX + e.clientY)
+            var x = "Cordenad X: " + e.clientX;
+            var y = "Cordenada Y: " + e.clientY;
+            document.getElementById("coorX").innerHTML = x;
+            document.getElementById("coorY").innerHTML = y;
+        }
+        function clearmove(){
+            document.getElementById("coorX").innerHTML = "";
+            document.getElementById("coorY").innerHTML = "";
+        }
+    </script>
+</body>
+</html>

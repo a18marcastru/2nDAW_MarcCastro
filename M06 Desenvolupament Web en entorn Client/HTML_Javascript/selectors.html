@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <script src="selectors.js"></script>
+    <style>
+        .verde{
+            background: green;
+            color: red;
+        }
+        .rojo{
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="primer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laborum quisquam deserunt facilis repellendus explicabo, qui sit eaque natus vero dolor asperiores voluptatibus error doloremque dolores quas excepturi saepe nisi.</p>
+    <p>Similique eum iure repudiandae tempore fugit totam, in ratione, incidunt libero culpa dicta illum perferendis itaque neque illo, officia accusantium quidem? Ab quidem minus officia dolor voluptatum cumque corporis illum.</p>
+    <p class="importante">Ea dolor harum, voluptates exercitationem ratione corporis dicta autem fuga molestias provident fugiat iure omnis ad alias recusandae consequuntur iusto amet, doloremque corrupti consectetur aperiam illum. Tempora laudantium et in.</p>
+    <p class="importante">Soluta a obcaecati aut nobis? Magnam cum tempore quisquam est debitis fugiat culpa, maiores modi sequi illo. Corporis, sunt quibusdam eius suscipit magni adipisci voluptate omnis, facere obcaecati, saepe magnam!</p>
+    <a id="enlace">Youtube</a>
+
+    <script>
+        let pp=document.getElementById("primer");
+        pp.innerHTML="Primer parrafo";
+        pp.classList.add("verde");
+        let parrafo=document.getElementsByClassName("importante");
+        parrafo[1].classList.add("rojo");
+        let par=document.getElementsByTagName("p");
+        let p2 = document.getElementById("p");
+        par[1].insertAdjacentHTML("afterend",`<ul>
+                                                    <li>Quiero</li>
+                                                    <li>Casa</li>
+                                                                    </ul>`);
+
+        document.getElementById("enlace").setAttribute("href","https://www.youtube.com");
+    </script>
+</body>
+</html>
