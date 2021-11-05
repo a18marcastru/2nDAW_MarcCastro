@@ -1,0 +1,67 @@
+#superior {
+    display: grid;
+    grid-template-areas: 
+    'super'
+    'menu menu tiquet'
+    'final';
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 2px solid black;
+}
+.super {
+    grid-area: super;
+    text-align: center;
+    margin-bottom: 100px;
+}
+label {
+    position: absolute;
+    top:0;
+    left:0;    
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 200px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-variant: small-caps;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.item {
+    position: relative;
+    box-shadow: 4px 4px 3px #888888;
+    width: 200px;
+    height: 199px;
+}
+
+.item:hover {
+    box-shadow: 5px 5px 9px black;
+}
+
+.butons {
+    width: 200px;
+    position: absolute;
+    bottom: 5px;
+    text-align: center;
+}
+
+input {
+    width: 20px;
+    border-radius: 50px;
+    border: 2px;
+}
+
+input[type="text"]{
+    border-radius: 0px;
+    opacity: 0.5;
+    border: 0px;
+}
+
+.item {
+    margin-bottom: 20px;
+}
+.item{
+    grid-area: menu;
+}
