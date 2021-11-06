@@ -25,7 +25,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../xampp/php/php.exe" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CodeWars" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -39,6 +39,8 @@
       <updated>1636060464136</updated>
       <workItem from="1636060467406" duration="120000" />
       <workItem from="1636061547931" duration="108000" />
+      <workItem from="1636141930864" duration="51000" />
+      <workItem from="1636142198064" duration="17000" />
     </task>
     <servers />
   </component>
