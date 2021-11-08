@@ -1,0 +1,29 @@
+div {
+    border: 15px solid;
+}
+.id1 {
+    background-color: red;
+    height: 50vh;
+    width: 50vw;
+}
+.id2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: blue;
+    height: 50vh;
+    width: 50vw;
+}
+.id3 {
+    background-color: yellow;
+    height: 50vh;
+    width: 50vw;
+}
+.id4 {
+    position: absolute;
+    background-color: purple;
+    height: 50vh;
+    width: 50vw;
+    right: 0;
+    bottom: 0;
+}
