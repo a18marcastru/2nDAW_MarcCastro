@@ -10,6 +10,7 @@ p {
 }
 #nevagation {
     list-style: none;
+    padding-left: 0px;
 }
 .left {
     float: left;

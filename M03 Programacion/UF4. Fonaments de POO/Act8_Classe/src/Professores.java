@@ -14,6 +14,6 @@ public class Professores {
 	}
 	
 	public String toString() {
-		return "Nom: " + this.nom + " Cognom: " + this.cognom + " Formacio: " +  this.formacio;
+		return this.nom + " Cognom: " + this.cognom + " Formacio: " +  this.formacio;
 	}
 }

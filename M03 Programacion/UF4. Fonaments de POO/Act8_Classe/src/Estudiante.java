@@ -3,7 +3,7 @@ public class Estudiante {
 	private String dni;
 	private String nom;
 	private String cognom;
-	private float notaFinal;
+	private int notaFinal;
 	
 	//Constructores
 	
@@ -18,27 +18,8 @@ public class Estudiante {
 		this.notaFinal = notaFinal;
 	}
 	
+		//Setters y Getters
 	
-/*	//Setters y Getters
-	
-	public String getDni() {
-		return dni;
-	}
-	public void setDni(String dni) {
-		this.dni = dni;
-	}
-	public String getNom() {
-		return nom;
-	}
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	public String getCognom() {
-		return cognom;
-	}
-	public void setCognom(String cognom) {
-		this.cognom = cognom;
-	}
 	public int getNotaFinal() {
 		return notaFinal;
 	}
@@ -46,9 +27,8 @@ public class Estudiante {
 		this.notaFinal = notaFinal;
 	}
 	
-	*/
 	
 	public String toString() {
-		return "DNI: " + this.dni + " Nom: " + this.nom + " Cognom: " + this.cognom + " Nota final: " + this.notaFinal;
+		return " DNI: " + this.dni + " Nom: " + this.nom + " Cognom: " + this.cognom + " Nota final: " + this.notaFinal;
 	}
 }

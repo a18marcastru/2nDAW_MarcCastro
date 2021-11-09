@@ -8,23 +8,41 @@ public class ClasseTest {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Pon el nombre del grupo: ");
-		String nom = input.next();
+		String nomG = input.next();
 		
 		System.out.println("Pon el nombre del Tutor: ");
-		String nom = input.next();
+		String nomP = input.next();
 		
 		System.out.println("Pon el apellido del Tutor: ");
-		String  = input.next();
+		String cognomP = input.next();
 		
-		Estudiante alvaro = new Estudiante("1111","Alvaro","Perez",6);
+		System.out.println("Pon la formacion del Tutor: ");
+		String formacioP = input.next();
 		
-		Professores teresa = new Professores("Tereza","Glistau","Programacio");
+		Professores profe = new Professores(nomP,cognomP,formacioP);
 		
-		Grupos DAW = new Grupos("2DAW","Tereza",10);
-	
-		System.out.println(alvaro);
+		System.out.println("Dime cuantos alumnos hay: ");
+		int numalu = input.nextInt();
 		
-		System.out.println(teresa);
+		Grupos DAW = new Grupos(nomG,profe,numalu);
+		
+		for(int i = 0;i < numalu;i++) {
+			System.out.println("Pon el DNI del alumno: ");
+			String dni = input.next();
+			
+			System.out.println("Pon el nombre del alumno: ");
+			String nomA = input.next();
+			
+			System.out.println("Pon el apellido del alumno: ");
+			String cognomA = input.next();
+			
+			System.out.println("Pon la notafinal: ");
+			int notaA = input.nextInt();
+			
+			Estudiante alum = new Estudiante(dni,nomA,cognomA,notaA);
+
+			DAW.afegirEstudiante(alum);
+		}
 		
 		System.out.println(DAW.toString());
 	}

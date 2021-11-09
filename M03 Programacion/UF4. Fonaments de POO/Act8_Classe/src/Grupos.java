@@ -3,13 +3,12 @@ public class Grupos {
 	
 	private String nom;
 	private Estudiante[] grupos;
-	private String tutor;
+	private Professores tutor;
 	private int numAlumnes;
-	private int numApro = 0;
 	
 	//Constructores
 	
-	Grupos(String nom,  String tutor, int numAlumnes) {
+	Grupos(String nom,  Professores tutor, int numAlumnes) {
 		this.nom = nom;
 		this.tutor = tutor;
 		this.numAlumnes = 0;
@@ -21,9 +20,39 @@ public class Grupos {
 		this.numAlumnes++;
 	}
 	
+	public int numAprovats() {
+		int aprovats = 0;
+		for(int i = 0;i < numAlumnes;i++) {
+			if(this.grupos[i].getNotaFinal()>=5) {
+				aprovats++;
+			}
+		}
+		return aprovats;
+	}
+	
+	public Estudiante[] Aprovats() {
+		int naprovats = this.numAprovats();
+		
+		Estudiante[] vAprovats = new Estudiante[naprovats];
+		int j = 0;
+		for(int i = 0;i < numAlumnes;i++) {
+			if(this.grupos[i].getNotaFinal()>=5) {
+				vAprovats[j] = this.grupos[i];
+				j++;
+			}
+		}
+		return vAprovats;
+	}
+	
 	public String toString() {
 		String sortida = "Nom del curs: " + this.nom + 
-		", Tutor: " + this.tutor + ", Alumnos: " +  this.numAlumnes 
-		+
+		", Tutor: " + this.tutor.toString() + ", Cantidad máxima estudiantes: " +  this.grupos.length
+		+ ", Cantidad actual de estudiantes: " + this.numAlumnes;
+		
+		for(int i = 0;i<numAlumnes;i++) {
+			sortida += this.grupos[i].toString();	
+		}
+		
+		return sortida;
 	}
 }
