@@ -1,0 +1,12 @@
+body {
+    margin: 5% auto;
+    width: 400px;
+    font-family:"arial";
+}
+.dropcap {
+    float: left;
+    font-size: 4em;  
+    line-height: 80%;
+    margin-right: 10px;
+}
+  

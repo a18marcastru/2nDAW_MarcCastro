@@ -4,20 +4,29 @@ function ocultar_divs() {
         divs[i].style.display="none";
     }
 }
-
 function crear_list() {
     let divs = document.getElementsByClassName("modules");
-    let lista = document.getElementById("lista");
-    for(i = 1;i < divs.length;i++){
-        var li = document.createElement("LI");
-        var textnode = document.createTextNode("Parte " + i);
+    let listas = document.getElementById("lista");
+    cont = 1;
+    
+    for(i = 0;i < divs.length;i++){
+        var li = document.createElement("li");
+        var atri = document.createTextNode("Parte " + cont++);
         li.setAttribute("num",i);
-        li.appendChild(textnode);
-        lista.appendChild(li);
+        li.appendChild(atri);
+        listas.appendChild(li);
     }
-    document.addEventListener("click", function(e) => {
-        document.getElementById(i).classList.add("seleccionado");
-        divs[i - 1].style.display="block";
+    listas.addEventListener("click", function(e) {
+        let num = e.target.getAttribute("num");
+        for(i = 0;i < divs.length;i++){
+            if(i == num) {
+                divs[i].style.display="block";
+            }
+            else {
+                divs[i].style.display="none";
+            }
+        }
+        //document.getElementById(num).classList.add("seleccionado");
     });
 }
 
