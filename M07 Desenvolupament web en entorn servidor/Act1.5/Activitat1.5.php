@@ -45,14 +45,12 @@ function raiz(){
     return array($ope,$num2,$res);
 }
 function mostrar($resultado){
-    if(count($resultado) == 4){
+    if (count($resultado) == 4) {
         echo "Has demanat " . $resultado[0] . " " . $resultado[1] . " i " . $resultado[2] . " . El resultat és: " . $resultado[3];
 
-    }
-    elseif(count($resultado) == 3){
+    } else if (count($resultado) == 3) {
         echo "Has demanat realitzar l'". $resultado[0] . " de " . $resultado[1] . " . El resultat és: " . $resultado[2];
-    }
-    else{
+    } else {
         echo "Has demanat " . $resultado[0] . " " . $resultado[1] . " entre " . $resultado[2] . " . El resultat és: " . $resultado[3]
             . " i el residu " . $resultado[4];
     }
@@ -76,7 +74,7 @@ else if($num==4){
     $resultado=dividir();
     mostrar($resultado);
 }
-else{
+else if($num==5){
     $resultado=raiz();
     mostrar($resultado);
 }
@@ -129,7 +127,7 @@ else if($num==2){
 
     echo "El perimetro del cuadrado de costado $costat es: $resultado";
 }
-else{
+else if($num==3){
     $monedas = array(0.01,0.05,0.1,0.2,0.5,1,2);
     $moneda = $monedas[rand(0,6)];
     $diners = rand(1,1000);
@@ -152,27 +150,25 @@ function matricula($num,$lletres){
         lletres_mat($lletres);
 
     } catch(Exception $e) {
-
-        echo "Matrícula incorrecta. ";
-    } };
+        echo " Matrícula incorrecta. ";
+    }
+};
 
 function num_mat($numMat){
     echo $numMat;
     if ($numMat < 0 or $numMat > 9999) {
-        throw new Exception ("Número de la matrícula incorrecte");
+        throw new Exception (" Número de la matrícula incorrecte");
     } else {
-        echo "nombre correcte";
+        echo " nombre correcte";
     }
-
 };
 
 function lletres_mat($lletres){
     if ( strlen($lletres) <> 3 or
         preg_match("/[0-9]/",$lletres) or
         preg_match("/[aeiou]/i",$lletres)) {
-        throw new Exception ("Lletres de la matrícula incorrecte");
-    } else echo "Lletres correctes";
-
+        throw new Exception (" Lletres de la matrícula incorrecte");
+    } else echo " Lletres correctes";
 }
 //Crida a la funció de comprovació
-matricula(1111,"BBo");
+matricula(1111,"aeo");
