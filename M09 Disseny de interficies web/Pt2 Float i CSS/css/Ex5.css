@@ -1,11 +1,10 @@
 body {
     margin: 5% auto;
     width: 400px;
-    font-family:"arial";
 }
 .floatright {
     float: right;
-    margin: 2em;
+    margin: 10px;
     clear: right;
 }
 

@@ -8,7 +8,7 @@ public class Grupos {
 	
 	//Constructores
 	
-	Grupos(String nom,  Professores tutor, int numAlumnes) {
+	public Grupos(String nom,  Professores tutor, int numAlumnes) {
 		this.nom = nom;
 		this.tutor = tutor;
 		this.numAlumnes = 0;
@@ -46,8 +46,8 @@ public class Grupos {
 	
 	public String toString() {
 		String sortida = "Nom del curs: " + this.nom + 
-		", Tutor: " + this.tutor.toString() + ", Cantidad máxima estudiantes: " +  this.grupos.length
-		+ ", Cantidad actual de estudiantes: " + this.numAlumnes;
+		", Tutor: " + this.tutor.toString() + ", Cantidad máxima estudiantes: " +  this.grupos.length + "\n"
+		+ ", Cantidad actual de estudiantes: " + this.numAlumnes + "\n";
 		
 		for(int i = 0;i<numAlumnes;i++) {
 			sortida += this.grupos[i].toString();	

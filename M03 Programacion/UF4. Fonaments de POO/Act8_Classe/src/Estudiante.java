@@ -23,9 +23,6 @@ public class Estudiante {
 	public int getNotaFinal() {
 		return notaFinal;
 	}
-	public void setNotaFinal(int notaFinal) {
-		this.notaFinal = notaFinal;
-	}
 	
 	
 	public String toString() {
