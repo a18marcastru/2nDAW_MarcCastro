@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/Activitat1.5.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/Activitat1.5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.2.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.3/Activitat_1.3.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.3/Activitat_1.3.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +40,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marcc\Desktop\Github\2nDAW_MarcCastro\M07 Desenvolupament web en entorn servidor\Act1.9\Enunciat 2" />
+      <recent name="C:\Users\marcc\Desktop\Github\2nDAW_MarcCastro\M07 Desenvolupament web en entorn servidor\Act1.9\Enunciat 1" />
       <recent name="C:\Users\marcc\Desktop\Github\2nDAW_MarcCastro\M07 Desenvolupament web en entorn servidor\Act1.9\Enunciat 3" />
     </key>
   </component>
@@ -67,7 +67,7 @@
       <workItem from="1636743400720" duration="789000" />
       <workItem from="1636744241543" duration="306000" />
       <workItem from="1636744658237" duration="5084000" />
-      <workItem from="1636816759824" duration="10647000" />
+      <workItem from="1636816759824" duration="12123000" />
     </task>
     <servers />
   </component>

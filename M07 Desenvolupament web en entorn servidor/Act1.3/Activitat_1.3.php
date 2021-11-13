@@ -62,9 +62,9 @@ echo "Tu DNI es $numero"."$lletra";
 
 <?php
 
-$corredores=array(array("H","Marc","Castro","Trullà",""),
-    array("D","Julia","Ramirez","Sebastian",""),
-    array("H","Timur","Busquets","Urpina",""));
+$corredores=array(array("H","Marc","Castro",""),
+    array("D","Julia","Ramirez",""),
+    array("H","Timur","Busquets",""));
 
 for($i=0;$i<count($corredores);$i++){
     $corredores[$i][3]= strtoupper(substr($corredores[$i][0],0,1)).
