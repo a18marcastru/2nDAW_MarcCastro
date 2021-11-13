@@ -1,0 +1,43 @@
+ASX,M01,Implantacio de sistemes operatius
+DAM,M01,Sistemes informàtics
+DAW,M01,Sistemes informàtics
+ASX,M02,Gestió de bases de dades
+DAM,M02,Bases de dades
+DAW,M02,Bases de dades
+ASX,M03,Programació bàsica
+DAM,M03,Programació
+DAW,M03,Programació
+ASX,M04,Llenguatge de marques i sistemes de gestió empresarial
+DAM,M04,Llenguatge de marques i sistemes de gestió empresarial
+DAW,M04,Llenguatge de marques i sistemes de gestió empresarial
+ASX,M05,Fonaments de maquinari
+DAM,M05,Entorns de desenvolupament
+DAW,M05,Entorns de desenvolupament
+ASX,M06,Administració de sistemes operatius
+DAM,M06,Accés a dades
+DAW,M06,Desenvolupament web en entorn client
+ASX,M07,Planificació i administració de xarxes
+DAM,M07,Desenvolupament d’interfícies 
+DAW,M07,Desenvolupament web en entorn servidor 
+ASX,M08,Serveis de xarxa i Internet
+DAM,M08,Programació multimèdia i dispositius mòbils
+DAW,M08,Desplegament d’aplicacions web
+ASX,M09,Implantació d’aplicacions web
+DAM,M09,Programació de serveis i processos
+DAW,M09,Disseny d’interfícies web
+ASX,M10,Administració de bases de dades
+DAM,M10,Sistemes de gestió empresarial
+DAW,M10,Formació i orientació laboral
+ASX,M11,Seguretat i alta disponibilitat
+DAM,M11,Formació i orientació laboral
+DAW,M11,Empresa i iniciativa emprenedora
+ASX,M12,Formació i orientació laboral
+DAM,M12,Empresa i iniciativa emprenedora
+DAW,M12,Projecte de Síntesi
+ASX,M13,Empresa i iniciativa emprenedora
+DAM,M13,Projecte de Síntesi
+DAW,M13,Formació en centres de treball 
+ASX,M14,Projecte de Síntesi
+DAM,M14,Formació en centres de treball 
+ASX,M15,Formació en centres de treball 
+

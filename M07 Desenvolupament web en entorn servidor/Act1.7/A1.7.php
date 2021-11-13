@@ -1,15 +1,13 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
     <head>
-        <title>ACT1.5</title>
+        <title>ACT1.7</title>
         <meta http-equiv="content-type" content="text/html;charset=utf-8" />
         <meta name="generator" content="Geany 1.36" />
     </head>
     <body>
         <?php
-        // define variables and set to empty values
         $Model = $Marca = $Motor = $Cilindrada = $Energia = $Opcions = "";
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -29,7 +27,8 @@
         }
         ?>
         <h1> Formulari i resposta</h1>
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <!--Otra forma de enviar informacion aparte de POST puedes usar GET poniendo en method-->
+        <form method="post" action="<?php echo $_SERVER["PHP_SELF"];?>">
             Model: <input type="text" name="Model">
             <br><br>
             Marca: <input type="text" name="Marca">
@@ -57,18 +56,18 @@
 
         <?php
         echo "<h2>Your Input:</h2>";
-        echo $Model;
-        echo "<br>";
-        echo $Marca;
-        echo "<br>";
-        echo $Motor;
-        echo "<br>";
-        echo $Cilindrada;
-        echo "<br>";
-        echo $Energia;
-        echo "<br>";
-        echo $Opcions;
-        echo "<br>";
+            echo $Model;
+            echo "<br>";
+            echo $Marca;
+            echo "<br>";
+            echo $Motor;
+            echo "<br>";
+            echo $Cilindrada;
+            echo "<br>";
+            echo $Energia;
+            echo "<br>";
+            echo $Opcions;
+            echo "<br>";
         ?>
     </body>
 </html>

@@ -78,8 +78,8 @@ else if($num==5){
     $resultado=raiz();
     mostrar($resultado);
 }
-
 ?>
+
 
 <br><br>
 
@@ -141,34 +141,34 @@ else if($num==3){
 <br><br>
 
 <?php
-
-function matricula($num,$lletres){
+function matricula($num,$letras){
 
     try {
 
         num_mat($num);
-        lletres_mat($lletres);
+        letras_mat($letras);
 
     } catch(Exception $e) {
-        echo " Matrícula incorrecta. ";
+        echo " Matricula incorrecta. ";
     }
 };
 
 function num_mat($numMat){
     echo $numMat;
     if ($numMat < 0 or $numMat > 9999) {
-        throw new Exception (" Número de la matrícula incorrecte");
+        throw new Exception (" Numero de la matricula incorrecta");
     } else {
-        echo " nombre correcte";
+        echo " Nombre correcto";
     }
 };
 
-function lletres_mat($lletres){
-    if ( strlen($lletres) <> 3 or
-        preg_match("/[0-9]/",$lletres) or
-        preg_match("/[aeiou]/i",$lletres)) {
-        throw new Exception (" Lletres de la matrícula incorrecte");
-    } else echo " Lletres correctes";
+function letras_mat($letras){
+    if ( strlen($letras) <> 3 or
+        preg_match("/[0-9]/",$letras) or
+        preg_match("/[aeiou]/i",$letras)) {
+        throw new Exception (" Letras de la matricula incorrecte");
+    } else echo " $letras Letras correctas";
 }
-//Crida a la funció de comprovació
-matricula(1111,"aeo");
+
+matricula(1111,"HYT");
+?>

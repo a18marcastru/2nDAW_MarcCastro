@@ -8,7 +8,7 @@
 <body>
 
 <?php
-// define variables and set to empty values
+
 $nameErr = $emailErr = $fechaErr = $telefonoErr = $genderErr = $idiomas_parErr = $idiomas_aprErr = $temasErr = "";
 $name = $email = $fecha = $telefono = $gender = $idiomas_par = $idiomas_apr = $temas = $comment = "";
 
@@ -17,12 +17,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nameErr = "Name is required";
     } else {
         $name = test_input($_POST["name"]);
+        if (!preg_match("/^[A-Za-zƒŠŒŽšœžŸÀÁÂÃÄÅÆÇÈÉÊ ËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõöøùúûüýþÿ]*$/",$name)) {
+            $nameErr = "Only letters and white space allowed";
+        }
     }
 
     if (empty($_POST["email"])) {
         $emailErr = "Email is required";
     } else {
         $email = test_input($_POST["email"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $emailErr = "Invalid email format";
+        }
     }
 
     if (empty($_POST["fecha"])) {
@@ -35,6 +41,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $telefonoErr = "Telefono is required";
     } else {
         $telefono = test_input($_POST["telefono"]);
+        if (!preg_match('/^[967]\d{8}$/', $telefono)){
+            $telefonoErr = "El teléfono tiene 9 cifras y empieza por 9, 6 o 7";
+        }
     }
 
     if (empty($_POST["idiomas_par"])) {
@@ -91,11 +100,12 @@ function test_input($data) {
     <input type="radio" name="gender" value="other">Other
     <span class="error">* <?php echo $genderErr;?></span>
     <br><br>
-    <label for="idiomas_par">Idioma que hablas: </label>
-    <select id="idiomas_par" name="idiomas_par" size="3">
+    <label for="idiomas_par">Idiomas que hablas: </label>
+    <select id="idiomas_par" name="idiomas_par" size="3" multiple>
         <option value="Español">Español</option>
         <option value="Catalan">Catalan</option>
         <option value="Ingles">Ingles</option>
+        <option value="Aleman">Aleman</option>
     </select>
     <span class="error">* <?php echo $idiomas_parErr;?></span>
     <br><br>
@@ -103,11 +113,11 @@ function test_input($data) {
     <span class="error">* <?php echo $idiomas_aprErr;?></span>
     <br><br>
     <label for="temas">Temas: </label>
-    <select id="temas" name="temas" size="4">
-        <option value="Programacion">Programacion</option>
-        <option value="Diseñador">Diseñador</option>
-        <option value="Ingeniero">Ingeniero</option>
-        <option value="Ciberseguridad">Ciberseguridad</option>
+    <select id="temas" name="temas" size="4" multiple>
+        <option value="programacion">Programacion</option>
+        <option value="diseñador">Diseñador</option>
+        <option value="ingeniero">Ingeniero</option>
+        <option value="ciberseguridad">Ciberseguridad</option>
     </select>
     <span class="error">* <?php echo $temasErr;?></span>
     <br><br>
@@ -118,25 +128,24 @@ function test_input($data) {
 </form>
 
 <?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $email;
-echo "<br>";
-echo $fecha;
-echo "<br>";
-echo $telefono;
-echo "<br>";
-echo $gender;
-echo "<br>";
-echo $idiomas_apr;
-echo "<br>";
-echo $idiomas_par;
-echo "<br>";
-echo $temas;
-echo "<br>";
-echo $comment;
+    echo "<h2>Your Input:</h2>";
+    echo $name;
+    echo "<br>";
+    echo $email;
+    echo "<br>";
+    echo $fecha;
+    echo "<br>";
+    echo $telefono;
+    echo "<br>";
+    echo $gender;
+    echo "<br>";
+    echo $idiomas_apr;
+    echo "<br>";
+    echo $idiomas_par;
+    echo "<br>";
+    echo $temas;
+    echo "<br>";
+    echo $comment;
 ?>
-
 </body>
 </html>

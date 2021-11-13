@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/A1.5.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/A1.5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/Activitat1.5.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.5/Activitat1.5.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.2.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.2.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.php" beforeDir="false" afterPath="$PROJECT_DIR$/M07 Desenvolupament web en entorn servidor/Act1.7/A1.7.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="20TF25kHqI9mIJofhGQdt7xiS0L" />
   <component name="ProjectViewState">
@@ -26,9 +36,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/ACT1.7-1 formularis SOL.php" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marcc\Desktop\Github\2nDAW_MarcCastro\M07 Desenvolupament web en entorn servidor\Act1.9\Enunciat 3" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,6 +61,13 @@
       <workItem from="1636391209018" duration="11000" />
       <workItem from="1636402768292" duration="2234000" />
       <workItem from="1636487935745" duration="3307000" />
+      <workItem from="1636739050535" duration="12000" />
+      <workItem from="1636739086194" duration="116000" />
+      <workItem from="1636739213216" duration="4142000" />
+      <workItem from="1636743400720" duration="789000" />
+      <workItem from="1636744241543" duration="306000" />
+      <workItem from="1636744658237" duration="5084000" />
+      <workItem from="1636816759824" duration="10647000" />
     </task>
     <servers />
   </component>
