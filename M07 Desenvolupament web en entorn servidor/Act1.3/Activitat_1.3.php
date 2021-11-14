@@ -29,7 +29,7 @@ else if($diaActual <= 351){
     echo "La estacion es $mesActual[2]";
 }
 else{
-    echo "La estacion actual es $mesActual[3]";
+    echo "La estacion es $mesActual[3]";
 }
 ?>
 

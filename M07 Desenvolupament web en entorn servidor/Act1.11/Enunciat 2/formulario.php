@@ -60,7 +60,7 @@
             $opciones = $_POST["opciones"];
         }
 
-        $fh = fopen("consultes.txt", "a+") or die("Se produjo un error al crear el archivo");
+        $fh = fopen("../Enunciat 2/consultes.txt", "a+") or die("Se produjo un error al crear el archivo");
 
         $texto = <<<_END
 Consulta:
