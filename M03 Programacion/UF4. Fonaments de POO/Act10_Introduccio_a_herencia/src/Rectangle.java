@@ -14,7 +14,7 @@ public class Rectangle extends ObjecteGeometric {
 	
 	//Metode public
 	public String toString() {
-		return "Rectangle\n X: " + super.toString() + " Base: " + this.base + " alçada: "
+		return "Rectangle\n " + super.toString() + " Base: " + this.base + " alçada: "
 		+ this.alcada;
 	}
 	

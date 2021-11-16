@@ -1,5 +1,5 @@
 
-public class ObjecteGeometric {
+public abstract class ObjecteGeometric {
 	
 	private int posx;
 	private int posy;

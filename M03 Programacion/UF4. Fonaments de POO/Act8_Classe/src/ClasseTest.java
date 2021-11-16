@@ -45,5 +45,12 @@ public class ClasseTest {
 		}
 		
 		System.out.println(DAW.toString());
+		System.out.println("La cantidad de alumnos aprovados: " + DAW.numAprovats());
+		
+		Estudiante[] vest = DAW.Aprovats();
+		
+		for(int i = 0; i < DAW.numAprovats();i++) {
+			System.out.println(vest[i]);
+		}
 	}
 }

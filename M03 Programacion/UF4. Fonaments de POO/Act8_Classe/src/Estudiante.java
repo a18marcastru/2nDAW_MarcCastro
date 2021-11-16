@@ -26,6 +26,6 @@ public class Estudiante {
 	
 	
 	public String toString() {
-		return " DNI: " + this.dni + " Nom: " + this.nom + " Cognom: " + this.cognom + " Nota final: " + this.notaFinal;
+		return " DNI: " + this.dni + " Nom: " + this.nom + " Cognom: " + this.cognom + " Nota final: " + this.notaFinal + "\n";
 	}
 }

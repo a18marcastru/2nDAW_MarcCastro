@@ -45,12 +45,10 @@ public class Grupos {
 	}
 	
 	public String toString() {
-		String sortida = "Nom del curs: " + this.nom + 
-		", Tutor: " + this.tutor.toString() + ", Cantidad máxima estudiantes: " +  this.grupos.length + "\n"
-		+ ", Cantidad actual de estudiantes: " + this.numAlumnes + "\n";
+		String sortida = "Nom del curs: " + this.nom + ", Tutor: " + this.tutor.toString() + ", " + "\n" + "Cantidad máxima estudiantes: " +  this.grupos.length + ", Cantidad actual de estudiantes: " + this.numAlumnes + "\n";
 		
 		for(int i = 0;i<numAlumnes;i++) {
-			sortida += this.grupos[i].toString();	
+			sortida += this.grupos[i];	
 		}
 		
 		return sortida;
