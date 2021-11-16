@@ -8,6 +8,63 @@ var data = {
     ]
 };
 
+    var model = {
+        init: function() {
+            return data;
+        },
+        funcion2: function(obj) {
+        }
+
+
+    };
+
+
+    var controller = {
+        funcionXXX: function(noteStr) {
+           
+            view.render();
+        },
+
+        funcionYYY: function() {
+            
+        },
+
+        init: function() {
+            model.init();
+            view.init();
+        }
+    };
+
+
+    var view = {
+        init: function() {
+            view.renderLista()
+        },
+        renderLista: function(){
+            var listas = document.getElementById("lista");
+            for (let index = 0; index < data.gatos.length; index++) {
+                var li = document.createElement("li");
+                var atri = document.createTextNode(data.gatos[index].name);
+                li.setAttribute("id",index);
+                li.appendChild(atri);
+                listas.appendChild(li);
+            }
+        }
+    };
+
+    controller.init();
+
+/*
+var data = {
+    catActive: 0,
+    gatos: [
+        { name: "Michifu", content: "lorem", image: "img/cat.jpg", nclicks: 0 },
+        { name: "Minino", content: "lorem2", image: "img/cat2.jpg", nclicks: 0 },
+        { name: "Garfield", content: "lorem", image: "img/cat3.jpg", nclicks: 0 },
+        { name: "Roberto", content: "lorem", image: "img/cat4.jpg", nclicks: 0 }
+    ]
+};
+
 function crear_list() {
     var listas = document.getElementById("lista");
     for (let index = 0; index < data.gatos.length; index++) {
@@ -41,3 +98,4 @@ function contador() {
 crear_list();
 imagen();
 contador();
+*/
