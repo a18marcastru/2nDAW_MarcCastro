@@ -1,23 +1,23 @@
 
 public class Partit {
 
-	private String nomEquipLocal;
-	private String nomEquipVisitant;
+	private Equip nomEquipLocal;
+	private Equip nomEquipVisitant;
 	private int golsEquipLocal;
 	private int golsEquipVisitant;
 	
 	
 	//Constructores
-	Partit(String e1, String e2) {
-		this.nomEquipLocal = e1;
-		this.nomEquipVisitant = e2;
+	Partit(Equip a, Equip b) {
+		this.nomEquipLocal = a;
+		this.nomEquipVisitant = b;
 		this.golsEquipLocal = 0;
 		this.golsEquipVisitant = 0;
 	}
 	
-	Partit(String e1, String e2, int g1, int g2) {
-		this.nomEquipLocal = e1;
-		this.nomEquipVisitant = e2;
+	Partit(Equip a, Equip b, int g1, int g2) {
+		this.nomEquipLocal = a;
+		this.nomEquipVisitant = b;
 		this.golsEquipLocal = g1;
 		this.golsEquipVisitant = g2;
 	}
@@ -41,12 +41,16 @@ public class Partit {
 		String resultat = "";
 		if(this.golsEquipLocal > this.golsEquipVisitant) {
 			resultat = "Ha ganado " + this.nomEquipLocal;
+			this.nomEquipLocal.incrementarPunts(3);
+			
 		}
 		else if(this.golsEquipLocal < this.golsEquipVisitant) {
 			resultat = "Ha ganado " + this.nomEquipVisitant;
 		}
 		else {
-			resultat = "Empat!";
+			resultat = "Empat! " + this.golsEquipLocal + this.golsEquipVisitant;
+			this.golsEquipLocal += 1;
+			this.golsEquipVisitant += 1;
 		}
 		return resultat;
 	}
