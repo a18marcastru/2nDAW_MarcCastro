@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <title>Peliculas</title>
+    <style>
+        div{
+            display: inline-block;
+            text-align: center;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <center>
         <h1>Peliculas</h1>
-        <input type="text" id="nombre" />
-        <button id="boton">Buscar</button>
+        Correo: <input type="text" id="correo" value=""/>
+        Contraseña: <input type="text" id="password" value=""/>
+        <br><br>
+        <input type="text" id="nombre" value=""/>
+        <button id="enviar">Buscar</button>
     </center>
-    <div>
-        <h2 id="title"></h2>
+    <div id="peliculas">
+
     </div>
     <script src="peliculas.js"></script>
 </body>

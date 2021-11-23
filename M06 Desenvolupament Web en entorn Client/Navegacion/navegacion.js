@@ -21,12 +21,12 @@ function crear_list() {
         for(i = 0;i < divs.length;i++){
             if(i == num) {
                 divs[i].style.display="block";
+                //document.getElementById(num).classList.add("seleccionado");
             }
             else {
                 divs[i].style.display="none";
             }
         }
-        //document.getElementById(num).classList.add("seleccionado");
     });
 }
 

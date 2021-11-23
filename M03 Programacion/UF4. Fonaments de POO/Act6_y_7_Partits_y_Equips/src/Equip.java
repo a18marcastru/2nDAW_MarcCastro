@@ -6,7 +6,7 @@ public class Equip {
 	
 	Equip(String nom) {
 		this.setNomEquip(nom);
-		this.puntLiga = 2;
+		this.puntLiga = 0;
 	}
 	
 	public void incrementarPunts(int num) {

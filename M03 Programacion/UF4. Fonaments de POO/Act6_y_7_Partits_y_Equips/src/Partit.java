@@ -33,24 +33,24 @@ public class Partit {
 	}
 	
 	public String marcador() {
-		return this.nomEquipLocal + ":" + this.golsEquipLocal + " ------ " +
-				this.nomEquipVisitant + ":" + this.golsEquipVisitant;
+		return this.nomEquipLocal.getNomEquip() + ":" + this.golsEquipLocal + " ------ " +
+				this.nomEquipVisitant.getNomEquip() + ":" + this.golsEquipVisitant;
 	}
 	
 	public String fi() {
 		String resultat = "";
 		if(this.golsEquipLocal > this.golsEquipVisitant) {
-			resultat = "Ha ganado " + this.nomEquipLocal;
+			resultat = "Ha ganado " + this.nomEquipLocal.getNomEquip();
 			this.nomEquipLocal.incrementarPunts(3);
-			
 		}
 		else if(this.golsEquipLocal < this.golsEquipVisitant) {
-			resultat = "Ha ganado " + this.nomEquipVisitant;
+			resultat = "Ha ganado " + this.nomEquipVisitant.getNomEquip();
+			this.nomEquipVisitant.incrementarPunts(3);
 		}
 		else {
 			resultat = "Empat! " + this.golsEquipLocal + this.golsEquipVisitant;
-			this.golsEquipLocal += 1;
-			this.golsEquipVisitant += 1;
+			this.nomEquipLocal.incrementarPunts(1);
+			this.nomEquipVisitant.incrementarPunts(1);
 		}
 		return resultat;
 	}
