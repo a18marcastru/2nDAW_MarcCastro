@@ -1,3 +1,32 @@
+document.getElementById("botlogin").addEventListener('click', function(){
+    let u = document.getElementById("username").value;
+    let p = document.getElementById("password").value;
+
+    const datosEnvio = new FormData();
+    datosEnvio.append('username',u);
+    datosEnvio.append('password',p);
+    
+    document.getElementById("botlogin").setAttribute("style","display: none;");
+    document.getElementById("loading").removeAttribute("hidden");
+
+    fetch('https://labs.inspedralbes.cat/~a18marcastru/AJAX_Pelicula/login.php',{
+        method: 'POST',
+        body: datosEnvio
+    }).then(function(res){
+        return res.json();
+    }).then(function(data){
+        console.log(data);
+        document.getElementById("login").setAttribute("style","display: none;");
+        document.getElementById("buscar").removeAttribute("style","display: none;");
+        htmlstr = "";
+        htmlstr += `<h2>Bienvenido ${data.nombre}</h2>
+                    <img src="${data.imagen}" alt=""></img>`;
+        document.getElementById("inicio").innerHTML = htmlstr;
+    }).catch(function(){
+        console.log("Problem!");
+    });
+});
+
 window.onload = function(){
     document.getElementById("nombre").focus();
 }

@@ -7,22 +7,46 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <title>Peliculas</title>
     <style>
-        div{
-            display: inline-block;
+        #peliculas{
+            display: inline-flex;
             text-align: center;
+        }
+        #login {
+            text-align: center;
+        }
+        #inicio {
+            text-align: center;
+        }
+        img {
+            display: inline-block;
             margin: 10px;
         }
     </style>
 </head>
 <body>
-    <center>
-        <h1>Peliculas</h1>
-        Correo: <input type="text" id="correo" value=""/>
-        Contraseña: <input type="text" id="password" value=""/>
-        <br><br>
-        <input type="text" id="nombre" value=""/>
-        <button id="enviar">Buscar</button>
-    </center>
+    <div id="inicio">
+
+    </div>
+
+    <div id="login">
+        <center>
+            <h1>Usuario</h1> 
+            <input type="text" name="username" id="username" value=""/>
+            <h1>Contraseña</h1> 
+            <input type="text" name="password" id="password" value=""/>
+            <br><br>
+            <button type="button" name="Iniciar" id="botlogin">Iniciar Session</button>
+            <img hidden src="./loading.gif" id="loading" height="350px"></img>
+        </center>
+    </div>
+
+    <div id="buscar" style="display: none;">
+        <center>
+            <h2>Peliculas</h2>
+            <input type="text" id="nombre" value=""/>
+            <button id="enviar">Buscar</button>
+        </center>
+    </div>
     <div id="peliculas">
 
     </div>
