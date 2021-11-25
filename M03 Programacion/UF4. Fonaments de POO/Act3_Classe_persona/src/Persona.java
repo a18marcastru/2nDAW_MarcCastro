@@ -84,7 +84,7 @@ public class Persona {
 	}
 	
 	public String toString(){
-		  return "Soc " + this.nom + " " + this.cognom + " amb DNI " + this.dni + " tinc " + this.edat + " anys " + " i " + (this.estatCivil==true?"SI":"NO") + " estic casat.";
+		  return "Soc " + this.nom + " " + this.cognom + " amb DNI " + this.dni + " tinc " + this.edat + " anys i " + (this.estatCivil==true?"SI":"NO") + " estic casat.";
 	}
 
 }

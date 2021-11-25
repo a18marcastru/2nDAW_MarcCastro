@@ -22,6 +22,7 @@ public class PersonaTest {
 		grupo[0].setNom("Marc");
 		grupo[0].setCognom("Castro");
 		grupo[0].setEdat(20); 
+		grupo[0].setEstatCivil(true);
 		System.out.println(grupo[0].toString());
 	}
 
