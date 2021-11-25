@@ -9,38 +9,45 @@ var data = {
 };
 
     var model = {
-        init: function() {
+        init: function(data) {
             return data;
         },
-        funcion2: function(obj) {
+        nuevoGatoActivo: function(n) {
+            data.catActive = n;
+        },
+        getGatoActual: function() {
+            return data.gatos[data.catActive];
         }
-
-
     };
-
 
     var controller = {
         funcionXXX: function(noteStr) {
-           
             view.render();
         },
-
-        funcionYYY: function() {
-            
+        cambioDeGato: function(numGato) {
+            model.nuevoGatoActivo(numGato);
+            view.renderGato(model.getGatoActual());
         },
-
         init: function() {
-            model.init();
-            view.init();
+            //datos-model.init();
+            view.init(data);
         }
     };
 
-
     var view = {
-        init: function() {
-            view.renderLista()
+        init: function(data) {
+            view.renderLista(data);
+            document.getElementById("gato").addEventListener('click', function(){
+                document.getElementById("cont").innerHTML++;
+                data.gatos[data.catActive].nclicks++;
+            });
         },
-        renderLista: function(){
+        renderGato: function(GATO) {
+            document.getElementById("gato").setAttribute("src",GATO.image);
+            document.getElementById("cont").innerHTML = GATO.nclicks;
+            document.getElementById("nom").innerHTML = GATO.name;
+        },
+        renderLista: function(datos){
             var listas = document.getElementById("lista");
             for (let index = 0; index < data.gatos.length; index++) {
                 var li = document.createElement("li");
@@ -51,8 +58,6 @@ var data = {
             }
         }
     };
-
-    controller.init();
 
 /*
 var data = {
