@@ -20,7 +20,7 @@ public class Cercle extends ObjecteGeometric {
 	
 	//Metode public
 	public String toString() {
-		return "Cercle\n" + super.toString() + " Radi: " + this.radi;
+		return "Cercle:\n" + super.toString() + " Radi: " + this.radi;
 	}
 	
 	public double perimetre() {

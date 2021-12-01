@@ -17,4 +17,3 @@ public class Producto {
 		return "El producto " + this.descripcio + " tiene un precio de " + this.precio + "€.";
 	}
 }
-

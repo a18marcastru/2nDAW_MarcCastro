@@ -47,5 +47,4 @@ public class TiendaTest {
 		System.out.println("Has salido del programa");
 		
 	}
-
 }
