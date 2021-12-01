@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/peliculas.js" beforeDir="false" afterPath="$PROJECT_DIR$/M06 Desenvolupament Web en entorn Client/AJAX/Peliculas/peliculas.js" afterDir="false" />
-    </list>
+    <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,6 +73,7 @@
       <workItem from="1637319728124" duration="73000" />
       <workItem from="1637381284693" duration="85000" />
       <workItem from="1637831408055" duration="6569000" />
+      <workItem from="1638316666743" duration="81000" />
     </task>
     <servers />
   </component>
