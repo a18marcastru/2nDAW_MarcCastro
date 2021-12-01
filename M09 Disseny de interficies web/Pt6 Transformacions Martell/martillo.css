@@ -22,7 +22,7 @@
     transition-property: background-color transform;
     transition-duration: 2s;
     transform-origin: 100px 300px;
-    transition-timing-function: cubic-bezier(0.250, 1.510, 0.000, 0.700);
+    transition-timing-function: cubic-bezier(0.000, 1.445, 0.310, 0.840);
     background-color: yellow;
     width:200px;
     height: 200px;
