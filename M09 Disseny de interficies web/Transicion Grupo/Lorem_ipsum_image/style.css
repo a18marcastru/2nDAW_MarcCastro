@@ -1,0 +1,16 @@
+.contenido {
+    display: flex;
+    width: 750px;
+    height: 200px;
+}
+.foto {
+    width: 25%;
+    height: 200px;
+    transition: width 2s;
+}
+.contenido:hover .foto {
+    width: 50px;
+}
+.contenido .foto:hover{
+    width: 600px;
+}

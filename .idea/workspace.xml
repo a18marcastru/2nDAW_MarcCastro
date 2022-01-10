@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="" />
+    <list default="true" id="d88516d8-3973-464e-b95b-995d83d47ad1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../moviequiz-grup-4" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -74,6 +76,17 @@
       <workItem from="1637381284693" duration="85000" />
       <workItem from="1637831408055" duration="6569000" />
       <workItem from="1638316666743" duration="81000" />
+      <workItem from="1638436226441" duration="194000" />
+      <workItem from="1638436949291" duration="1217000" />
+      <workItem from="1638528500105" duration="5729000" />
+      <workItem from="1639036300932" duration="2613000" />
+      <workItem from="1639039789226" duration="946000" />
+      <workItem from="1639043280224" duration="233000" />
+      <workItem from="1639047449692" duration="1445000" />
+      <workItem from="1639049733470" duration="160000" />
+      <workItem from="1639486949684" duration="754000" />
+      <workItem from="1640000144721" duration="601000" />
+      <workItem from="1640072177657" duration="8000" />
     </task>
     <servers />
   </component>
