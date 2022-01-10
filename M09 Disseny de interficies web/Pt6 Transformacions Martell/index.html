@@ -1,15 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="martillo.css">
     <title>Martillo</title>
+    <style>
+    #dalt {
+        background-color: blue;
+        transform: scale(2,1) translate(26%,0);
+    }
+    #punta {
+        background-color: green;
+        transform: translate(201%,-82%) skew(0,20deg);
+    }
+    #manec {
+        background-color: black;
+        transform: scale(0.7,3) translate(35%,0);
+    }
+    #contenidor {
+        background-color: yellow;
+        width:200px;
+        height: 200px;
+    }
+    div{ 
+        width: 50px;
+        height: 50px;
+    }
+    </style>
 </head>
 <body>
-    <div id="bola">
-    </div>
     <div id="contenidor">
         <div id="dalt">
         </div>
@@ -18,10 +38,5 @@
         <div id="manec">
         </div>
     </div>
-    <br><br>
-    <div id="tornillo">
-    </div>
-
-    <script src="martillo.js"></script>
 </body>
 </html>
