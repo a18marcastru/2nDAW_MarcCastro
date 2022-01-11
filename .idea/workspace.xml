@@ -33,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../moviequiz-grup-4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -87,6 +87,8 @@
       <workItem from="1639486949684" duration="754000" />
       <workItem from="1640000144721" duration="601000" />
       <workItem from="1640072177657" duration="8000" />
+      <workItem from="1641886683508" duration="2794000" />
+      <workItem from="1641903470140" duration="1251000" />
     </task>
     <servers />
   </component>
