@@ -9,7 +9,7 @@ document.getElementById("botlogin").addEventListener('click', function(){
     document.getElementById("botlogin").setAttribute("style","display: none;");
     document.getElementById("loading").removeAttribute("hidden");
 
-    fetch('https://labs.inspedralbes.cat/~a18marcastru/AJAX_Pelicula/login.php',{
+    fetch('https://labs.inspedralbes.cat/~a18marcastru/AJAX_Pelicula/login_pelicula.php',{
         method: 'POST',
         body: datosEnvio
     }).then(function(res){
