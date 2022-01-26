@@ -1,0 +1,19 @@
+Tutoriales:
+	- MYSQL: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
+	- APACHE: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es
+	- NGINX: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+	- SSL NGINX: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04
+
+Comandas:
+	- Comprobar los puertos: sudo netstat -patn
+	- Configurar la conexion a internet: sudo nano /etc/netplan/00-installer-config.yaml
+	Configuracion:
+	# This is the network config written by 'subiquity' 
+	network: 
+	  version: 2 
+	  ethernets: 
+            enp0s3: 
+	      addresses: [192.168.210.239/24] 
+	      gateway4: 192.168.210.1 
+	      nameservers: 
+		addresses: [192.168.210.1, 8.8.8.8]
