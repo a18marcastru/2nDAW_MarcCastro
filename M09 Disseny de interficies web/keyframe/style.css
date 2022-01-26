@@ -1,0 +1,67 @@
+.contenido {
+    background-color: royalblue;
+    height: 300px;
+    width: 300px;
+    position: relative;
+}
+#circulo {
+    border-radius: 50%;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+#vertical {
+    animation: 4s linear infinite movVertical;
+    position: relative;
+    height: 50%;
+    width: 50px;
+    top: 10px;
+}
+@keyframes movVertical {
+    0% {
+        left: 0px;
+    }
+    30% {
+        left: 250px;
+    }
+    100% {
+        top: 250px;
+    }
+}
+
+#circulo2 {
+    border-radius: 50%;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+#vertical2 {
+    animation: 10s linear infinite rotationVertical;
+    position: absolute;
+    height: 50%;
+    width: 50px;
+    left: 44%;
+    transform-origin: bottom;
+    background-color: black;
+}
+#busca {
+    animation: 2s linear infinite rotationVertical;
+    position: absolute;
+    top: 0;
+    width: 25px;
+    height: 50%;
+    border-radius: 40%;
+    left: 48%;
+    transform-origin: bottom;
+    background-color: chocolate;
+}
+@keyframes rotationVertical {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

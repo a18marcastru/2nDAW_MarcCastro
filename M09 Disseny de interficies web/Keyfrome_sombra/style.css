@@ -1,0 +1,37 @@
+#contenido {
+    border: 2px solid black;
+    height: 300px;
+    position: relative;
+}
+#suelo {
+    background-color: brown;
+    height: 90px;
+}
+#vertical {
+    background-color: black;
+    height: 210px;
+    width: 60px;
+    position: relative;
+    animation: 2s linear alternate infinite movVertical;
+}
+#pelota {
+    border-radius: 50%;
+    background-color: red;
+    height: 60px;
+    width: 60px;
+    position: absolute;
+}
+#sombra {
+    border-radius: 50%;
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    top: 230px;
+    position: absolute;
+    
+}
+@keyframes movVertical {
+    from {
+        left: 200px;
+    }
+}
