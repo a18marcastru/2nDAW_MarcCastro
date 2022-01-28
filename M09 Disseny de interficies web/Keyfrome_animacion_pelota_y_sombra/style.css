@@ -1,0 +1,69 @@
+#contenido {
+    border: 2px solid black;
+    height: 300px;
+    width: 350px;
+    position: relative;
+}
+#suelo {
+    background-color: brown;
+    height: 90px;
+}
+#horizontal {
+    border: 1px solid black;
+    height: 210px;
+    width: 60px;
+    position: relative;
+    animation: 5s ease-in alternate infinite movHori;
+}
+#pelota {
+    border-radius: 50%;
+    background-color: red;
+    height: 60px;
+    width: 60px;
+    top: 0px;
+    position: absolute;
+    animation: 1s ease-in alternate infinite movPilota;
+}
+#sombra {
+    border-radius: 50%;
+    background-color: black;
+    height: 60px;
+    width: 60px;
+    top: 235px;
+    position: absolute;
+    animation: 1s ease-in alternate infinite movSombra;
+    
+}
+@keyframes movHori {
+    from { 
+        left: 0px;
+    }
+    50%{
+        left: 290px;
+    }
+    to {
+        left: 0px;
+    }
+}
+@keyframes movPilota {
+    from { 
+    }
+    80%{
+        transform: scaleY(100%);
+    }
+    to {
+        transform: scaleY(100%);
+        top: 230px;
+    }
+}
+@keyframes movSombra {
+    from { 
+        transform: scale(.2);
+        opacity: 0.4;
+    }
+    to {
+        transform: scale(.7);
+        opacity: 0.9;
+        filter: blur(4px);
+    }
+}
