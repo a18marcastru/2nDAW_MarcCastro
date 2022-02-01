@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Cat cliker 2 VUE.JS</title>
+</head>
+<body>
+    <h1>Cat cliker 2</h1>
+    <div id="contador">
+        <img v-on:click="counter += 1" id="cat" src="img/cat.jpg" width="200px">
+        <h3>{{counter}}</h3>
+        <p>Juanito</p>
+    </div>
+
+    <div id="contador2">
+        <img v-on:click="counter += 1" id="cat2" src="img/cat2.jpg" width="200px">
+        <h3>{{counter}}</h3>
+        <p>Roberto</p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#contador',
+            data: {
+                counter: 0
+            }
+        })
+
+        var app = new Vue({
+            el: '#contador2',
+            data: {
+                counter: 0
+            }
+        })
+    </script>
+</body>
+</html>

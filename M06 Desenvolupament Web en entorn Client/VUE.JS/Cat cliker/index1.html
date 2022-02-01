@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Cat cliker 1 VUE.JS</title>
+</head>
+<body>
+    <h1>Cat cliker 1</h1>
+    <div id="contador">
+        <img v-on:click="counter += 1" id="cat" src="img/cat.jpg" width="200px" width="200px">
+        <h3>{{counter}}</h3>
+        <p>Juanito</p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: '#contador',
+            data: {
+                counter: 0
+            }
+        })
+    </script>
+</body>
+</html>
