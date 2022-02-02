@@ -24,18 +24,24 @@
             display: flex;
             justify-content: center;
         }
+        #NomMes {
+            display: flex;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Calendario 2021</h1>
+        <h2 id="NomMes"></h2>
         <div id="calendario"> 
 
         </div>
     </div>
     <script>
         const hoy = new Date();
-        document.getElementById("calendario").innerHTML=imprimirCalendario(hoy.getFullYear(),hoy.getMonth()+1,hoy.getDay());
+        document.getElementById("calendario").innerHTML=imprimirCalendario(hoy.getFullYear(),hoy.getMonth()+1,hoy.getDay()-1);
+        document.getElementById("NomMes").innerHTML = nombreMes(hoy.getMonth()+1);
     </script>
 </body>
 </html>

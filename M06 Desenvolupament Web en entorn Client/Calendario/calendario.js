@@ -2,6 +2,23 @@ function diaMes(a,m){
     return new Date(a,m,0).getDate();
 }
 
+function primerDia(mes,año){
+    let primDia= new Date(año,mes,0);
+    firstday = primDia.getDay();
+        if(firstday==6){
+            firstday=0;
+        }
+    return firstday;
+}
+
+function nombreMes(m) {
+    const nomMeses=['Enero','Febero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Setiembre','Octubre','Noviembre','Diciembre',]
+    htmlstr = "";
+    htmlstr += nomMeses[m-1];
+    return htmlstr
+
+}
+
 function imprimirCalendario(a,m,d){
     //let primerdia = new Date(año,mes-1,1).getDay();
     //let diasMes=dayInMonth(mes,año);
@@ -9,7 +26,7 @@ function imprimirCalendario(a,m,d){
     let dia=1;
     const diasMes= diaMes(a,m);
     const nomDies=['Lunes','Martes','Miercoles','Jueves','Viernes','Sabado','Domingo'];
-    //const nomMeses=['Enero','Febero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Setiembre','Octubre','Noviembre','Diciembre',]
+    let diasAsaltar=primerDia(m,a);
     for(let i=0;i<1;i++){
         htmlstr+="<tr>";
         for(let j=0;j<nomDies.length;j++){
@@ -21,7 +38,8 @@ function imprimirCalendario(a,m,d){
         htmlstr+="<tr>";
         for(let j=0;j<7;j++){
             if(diasAsaltar>0) {
-
+                diasAsaltar--;
+                htmlstr+=`<td></td>`;
             }
             else {
                 if(dia<=diasMes) {
@@ -30,9 +48,12 @@ function imprimirCalendario(a,m,d){
                     }
                     else{
                         htmlstr += `<td>${dia}</td>`;
-                    }            
+                    }
+                    dia++;          
                 }
-                dia++;
+                else{
+                    htmlstr+=`<td></td>`;
+                }
             }
         }
         htmlstr += "</tr>";
