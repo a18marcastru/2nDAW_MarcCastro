@@ -331,12 +331,12 @@ $(document).ready(function() {
 						</div>
 						<div>
 							<label for="shipZip" class="label">Postal Code</label>
-							<input name="shipZip" type="text" id="shipZip" size="36">
+							<input name="shipZip" type="text" id="shipZip" size="36" onkeyup="check2()">
 						</div>
 						<div>
 							<label for="shipCountry" class="label">Country</label>
 							<select name="shipCountry" id="shipCountry">
-								<option>Choose your country </option>
+								<option value="" disabled selected>Choose your country </option>
 								<option value="/us/">U.S.A. </option>
 								<option value="/us_espanol/">U.S.A. - Espa&ntilde;ol </option>
 								<option value="/af/">Afghanistan </option>
@@ -575,9 +575,9 @@ $(document).ready(function() {
 </div>
 <script src="http://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-	window.onload = function(){
+	/*window.onload = function(){
 		document.getElementById("name").focus();
-	}
+	}*/
 
 	var check = function() {
 		if (document.getElementById('address1').value == document.getElementById('address2').value) {
@@ -600,13 +600,29 @@ $(document).ready(function() {
 	document.getElementById("hideShip").addEventListener("click",function(){
 		document.getElementById("shipping").setAttribute("style","display: none;");
 	});
-	
+
 	let validacionNom = document.getElementById("shipName");
 	let validacionAdr = document.getElementById("shipAddress");
 	let validacionCiut = document.getElementById("shipCity");
 	let validacionEst = document.getElementById("shipState");
 	let validacionCodP = document.getElementById("shipZip");
 	let validacionCount = document.getElementById("shipCountry");
+
+	var check2 = function() {
+		var codi = document.getElementById("shipZip").value;
+		if(codi.length > 5 || codi.length < 5) {
+			document.getElementById("shipZip").style.background = "red";
+		}
+		else if(codi.length == 5) {
+			document.getElementById("shipZip").style.background = "green";
+		}
+	}
+
+	var select = document.getElementById("shipCountry");
+	select.addEventListener('change', function(){
+		var validacionCount = this.options[select.selectedIndex];
+	});
+
 	document.getElementById("submit").addEventListener("click", function(e) {
 		if(validacionNom.value == "") {
 			Swal.fire({
@@ -652,7 +668,7 @@ $(document).ready(function() {
 			Swal.fire({
 				icon: 'error',
 				title: 'Codi Postal:',
-				text: 'Solamente cinco numeros',
+				text: 'Solament cinc numeros',
 			})
 			e.preventDefault();
 		}
