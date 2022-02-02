@@ -37,62 +37,65 @@
     </div>
 
     <script>
-    
-    const datos = {nproductos: 5, productos: [
-                                    {id:0, nombre:"silla", precio:15},
-                                    {id:1, nombre:"monitor", precio:19},
-                                    {id:2, nombre:"teclado", precio:20},
-                                    {id:3, nombre:"raton", precio:30},
-                                    {id:4, nombre:"cascos", precio:25}
-    ]};
-    
-    let gallery = document.getElementById('form');
+        const datos = {nproductos: 5, productos: [
+                                        {id:0, nombre:"silla", precio:15},
+                                        {id:1, nombre:"monitor", precio:19},
+                                        {id:2, nombre:"teclado", precio:20},
+                                        {id:3, nombre:"raton", precio:30},
+                                        {id:4, nombre:"cascos", precio:25}
+        ]};
+        
+        let gallery = document.getElementById('form');
 
-    gallery.addEventListener('click', e => {
-        if(e.target.classList.contains('afegir')){
-            //Imprimo el ID del padre de quien ha generadp el evento
-            console.log(e.target.parentNode.id);
-            console.log("Has fet un afegir");
-            console.log(e.target);
+        gallery.addEventListener('click', e => {
+            if(e.target.classList.contains('afegir')){
+                //Imprimo el ID del padre de quien ha generadp el evento
+                console.log(e.target.parentNode.id);
+                console.log("Has fet un afegir");
+                console.log(e.target);
 
-            afegir(e.target.parentNode.id);
-        }
-        else if(e.target.classList.contains('treure')){
-            console.log("Has fet un treure");
+                afegir(e.target.parentNode.id);
+            }
+            else if(e.target.classList.contains('treure')){
+                console.log("Has fet un treure");
+                
+                treure(e.target.parentNode.id);
+            }
             
-            treure(e.target.parentNode.id);
-        }
-        
-        function afegir(idProducto){
-            document.getElementById("i"+idProducto).value++;
+            function afegir(idProducto){
+                document.getElementById("i"+idProducto).value++;
 
-            //alert("Has añadido un elemento de un articulo"+idProducto);
-        }
-        function treure(idProducto){
-            if(document.getElementById("i"+idProducto).value>0){
-                document.getElementById("i"+idProducto).value--;
-        
-            }
-            if(document.getElementById("i"+idProducto).value==0){
-                alert("No tienes ningun articulo");
-            }
-        }
-        function actualizarCarrito(){
-            htmlStr = "";
-            linputs = document.querySelectorAll("input[type='text']");
-            for(let index = 0;index < linputs.length;index++){
-                const element = linputs[index];
-                if(element.value>0){
-                    htmlStr+="Producto"+datos.productos[index].nombre +
-                    " --> " + element.value + " unidades a " + datos.productos +
-                    " Total linea: " + datos.productos 
+                if (document.getElementById("i" + idProducte).value == 1) {
+                    //e.target.style.display="block";
+                    document.querySelectorAll();
                 }
+                actualizarCarrito()
+                //alert("Has añadido un elemento de un articulo"+idProducto);
             }
-            document.getElementById("listado").innerHTML = htmlStr;
-        }
-    });
-
-
+            function treure(idProducto){
+                if(document.getElementById("i"+idProducto).value>0){
+                    document.getElementById("i"+idProducto).value--;
+            
+                }
+                if(document.getElementById("i"+idProducto).value==0){
+                    alert("No tienes ningun articulo");
+                }
+                actualizarCarrito()
+            }
+            function actualizarCarrito(){
+                htmlStr = "";
+                linputs = document.querySelectorAll("input[type='text']");
+                for(let index = 0;index < linputs.length;index++){
+                    const element = linputs[index];
+                    if(element.value>0){
+                        htmlStr+="Producto"+datos.productos[index].nombre +
+                        " --> " + element.value + " unidades a " + datos.productos +
+                        " Total linea: " + datos.productos 
+                    }
+                }
+                document.getElementById("listado").innerHTML = htmlStr;
+            }
+        });
     </script>
 
 </body>
