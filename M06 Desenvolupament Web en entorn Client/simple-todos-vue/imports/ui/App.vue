@@ -1,16 +1,35 @@
 <template>
-  <div className="container">
+  <div class="app">
     <header>
-      <h1>Todo List</h1>
+      <div className="app-bar">
+        <div className="app-header">
+          <h1>
+            🎮 🖥️ To Do List
+            <span v-if="incompleteCount > 0">({{incompleteCount}})</span>
+          </h1>
+        </div>
+      </div>
     </header>
-    <TaskForm />
-    <ul>
-      <Task
-          v-for="task in tasks"
-          v-bind:key="task._id"
-          v-bind:task="task"
-      />
-    </ul>
+    <div class="main">
+  <TaskForm />
+  <div class="filter">
+    <button
+        v-model="hideCompleted"
+        @click="toggleHideCompleted"
+    >
+      <span v-if="hideCompleted">Show All</span>
+      <span v-else>Hide Completed Tasks</span>
+    </button>
+  </div>
+      <ul class="tasks">
+        <Task
+            class="task"
+            v-for="task in tasks"
+            v-bind:key="task._id"
+            v-bind:task="task"
+        />
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -26,12 +45,27 @@ export default {
     TaskForm
   },
   data() {
-    return {};
+    return {
+      hideCompleted: false
+    };
   },
-  methods: {},
+  methods: {
+    toggleHideCompleted() {
+      this.hideCompleted = !this.hideCompleted;
+    }
+  },
   meteor: {
     tasks() {
-      return TasksCollection.find({}, { sort: { createdAt: -1 } }).fetch();
+      let filteredTasks = TasksCollection.find({}, { sort: { createdAt: -1 } }).fetch();
+      
+      if (this.hideCompleted) {
+        filteredTasks = filteredTasks.filter(task => !task.checked);
+      }
+
+      return filteredTasks;
+  },
+    incompleteCount() {
+      return TasksCollection.find({ checked: { $ne: true } }).count();
     }
   }
 };
