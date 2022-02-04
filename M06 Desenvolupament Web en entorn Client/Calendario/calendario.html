@@ -32,7 +32,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Calendario 2021</h1>
+        <h1 id="anyo"></h1>
         <h2 id="NomMes"></h2>
         <div id="calendario"> 
 
@@ -42,6 +42,7 @@
         const hoy = new Date();
         document.getElementById("calendario").innerHTML=imprimirCalendario(hoy.getFullYear(),hoy.getMonth()+1,hoy.getDay()-1);
         document.getElementById("NomMes").innerHTML = nombreMes(hoy.getMonth()+1);
+        document.getElementById("anyo").innerHTML = `Calendario ${hoy.getFullYear()}`;
     </script>
 </body>
 </html>
