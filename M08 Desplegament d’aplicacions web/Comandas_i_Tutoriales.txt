@@ -4,6 +4,8 @@ Tutoriales:
 	- NGINX: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 	- SSL NGINX: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04
 	- SSL APACHE: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
+	- phpmyadmin: https://diarioprogramador.com/como-instalar-phpmyadmin-en-ubuntu-server-20-04/
+	- Apache, MySQL, PHP (LAMP): https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
 
 Comandas:
 	- Comprobar los puertos: sudo netstat -patn
