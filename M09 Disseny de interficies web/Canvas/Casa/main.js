@@ -1,26 +1,34 @@
 window.onload = function () {
-    pintarCanvas();
-    document.getElementById("canvas").addEventListener("mousemove", pintarRatoli);
-    document.getElementById("canvas").addEventListener("mouseout", pintarCanvas);
+    repintarInicial();
+    document.getElementById("canvas").addEventListener("mousemove", repintar);
+    document.getElementById("canvas").addEventListener("mouseout", repintarInicial);
 }
-function pintarCanvas(e) {
+
+function repintarInicial() {
+    repintar();
+}
+
+function repintar(e) {
 
     var canvas = document.getElementById("canvas");
     var context = canvas.getContext("2d");
-
-    document.addEventListener("keydown", function(event){
-        console.log(event.key);
-
-        if(event.key == "g") {
-            printRatoli1(e);
-        }
-    });
 
     pintarFons(context);
     pintarCasa(context);
     pintarVentanas(context);
     pintarPuerta(context);
     pintarTecho(context);
+
+    if(e != null){
+        pintarRatoli(e);
+    }
+
+    document.addEventListener("keydown", function(event){
+        console.log(event.key);
+        if(event.key == "g") {
+            printRatoli1(e);
+        }
+    });
 }
 
 function pintarCasa(context) {
@@ -55,6 +63,17 @@ function pintarTecho(context) {
     context.fill();
 }
 
+function pintarRatoli(e) {
+    posX = e.offsetX;
+    posY = e.offsetY;
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#FF0000";
+    context.beginPath();
+    context.arc(posX, posY, 19, 1, 13);
+    context.fill();
+}
+
 function printRatoli1(e) {
     posX = e.offsetX;
     posY = e.offsetY;
@@ -66,14 +85,3 @@ function printRatoli1(e) {
     context.fill();
 }
 
-function pintarRatoli(e) {
-    pintarCanvas();
-    posX = e.offsetX;
-    posY = e.offsetY;
-    var canvas = document.getElementById("canvas");
-    var context = canvas.getContext("2d");
-    context.fillStyle = "#FF0000";
-    context.beginPath();
-    context.arc(posX, posY, 19, 1, 13);
-    context.fill();
-}

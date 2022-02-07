@@ -11,10 +11,11 @@
     <h1>Cat cliker 3</h1>
     <div id="app">
         <ul>
-            <li v-on:click="cambiarGato" v-for="(item, index) in gatos">
+            <li v-on:click="catActive" v-for="(item, index) in gatos">
                 {{item.name}}
             </li>
         </ul>
+        <img v-bind:src="'item[{{catActive}}].image'">
     </div>
 
     <script>
@@ -29,7 +30,7 @@
                     { name: "Roberto", content: "lorem", image: "img/cat4.jpg", nclicks: 0 }
                 ]
             }
-        })
+        });
     </script>
 </body>
 </html>
