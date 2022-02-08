@@ -11,11 +11,13 @@
     <h1>Cat cliker 3</h1>
     <div id="app">
         <ul>
-            <li v-on:click="catActive" v-for="(item, index) in gatos">
+            <li @click="cambioGatos(index)" v-for="(item, index) in gatos">
                 {{item.name}}
             </li>
         </ul>
-        <img v-bind:src="'item[{{catActive}}].image'">
+        <h1>{{gatos[catActive].content}}</h1>
+        <img @click="gatos[catActive].nclicks++" :src="gatos[catActive].image" alt="">
+        <h3>{{gatos[catActive].nclicks}}{{gatos[catActive].nclicks != 1 ? " clicks" : " click"}}</h3>
     </div>
 
     <script>
@@ -24,12 +26,18 @@
             data: {
                 catActive: 0,
                 gatos: [
-                    { name: "Michifu", content: "lorem", image: "img/cat.jpg", nclicks: 0 },
-                    { name: "Minino", content: "lorem2", image: "img/cat2.jpg", nclicks: 0 },
-                    { name: "Garfield", content: "lorem", image: "img/cat3.jpg", nclicks: 0 },
-                    { name: "Roberto", content: "lorem", image: "img/cat4.jpg", nclicks: 0 }
+                    { name: "Michifu", content: "Mi gato Michifu", image: "img/cat.jpg", nclicks: 0 },
+                    { name: "Minino", content: "Mi gato Minino", image: "img/cat2.jpg", nclicks: 0 },
+                    { name: "Garfield", content: "Mi gato gordo de mierda", image: "img/cat3.jpg", nclicks: 0 },
+                    { name: "Roberto", content: "Mi gato Roberto", image: "img/cat4.jpg", nclicks: 0 }
                 ]
-            }
+            },
+            methods: {
+                cambioGatos: function(index){
+                    this.catActive = index;
+                }
+            },
+
         });
     </script>
 </body>
