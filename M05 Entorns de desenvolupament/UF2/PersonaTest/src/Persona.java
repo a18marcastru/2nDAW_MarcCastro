@@ -67,6 +67,12 @@ public class Persona {
 	public void setEstatCivil(boolean estatCivil) {
 		this.estatCivil = estatCivil;
 	}
+	
+	/**
+	 * En esta parte estan los metodos publicos es decir las acciones a la informacion recibida.
+	 * @param edat en el public void Aniversari() es para sumar la edat en caso que sea su aniversario.
+	 * @param estatCivil en el public void Casament() o public void Divorci() es para decir que la informacion recibida es falso o verdadero.
+	 */
 	public void Aniversari() {
 		this.edat++;
 	}
@@ -76,6 +82,11 @@ public class Persona {
 	public void Divorci() {
 		this.estatCivil=false;
 	}
+	
+	/**
+	 * Despues de recibir la informacion, pasando por los constructores, 
+	 * getters y setters y por los metodos publicos, se devolvera un mensaje con la informacion pero con algunos cambios en caso de la edat, estatCivil...
+	 */
 	public String toString() {
 		return ("Soc " + this.nom + " " +
 		this.cognom
