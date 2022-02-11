@@ -1,0 +1,50 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+#central {
+    border: 1px solid black;
+    width: 100px;
+    height: 20vh;
+    margin: auto;
+    background-color: orange;
+}
+.celdas {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 79vh;
+}
+.celda {
+    border: 1px solid black;
+    background-color: green;
+}
+
+/*Tablet*/
+@media screen and (min-width: 600px) {
+    .celdas {
+        grid-template-columns: repeat(6,1fr);
+    }
+    .celda {
+        background-color: red;
+    }
+}
+
+/*Mobil horizontal*/
+@media screen and (orientation: landscape) {
+    .celdas {
+        grid-template-columns: repeat(4,1fr);
+    }
+    .celda {
+        background-color: blue;
+    }
+}
+
+/*Desktop*/
+@media screen and (min-width: 992px) {
+    .celdas {
+        grid-template-columns: repeat(12,1fr);
+    }
+    .celda {
+        background-color: yellow;
+    }
+}
