@@ -7,6 +7,7 @@ Tutoriales:
 	- SSL APACHE: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
 	- phpmyadmin: https://diarioprogramador.com/como-instalar-phpmyadmin-en-ubuntu-server-20-04/
 	- Apache, MySQL, PHP (LAMP): https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
+	- Seguridad en phpmyadmin y mysql: https://www.digitalocean.com/community/tutorials/how-to-install-and-secure-phpmyadmin-on-ubuntu-18-04
 	- Autenticación contraseña con Apache: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-18-04
 	Sin configurar en .htacces, se configura en /etc/phpmyadmin/apache.conf
 	- Manual Apache: https://httpd.apache.org/docs/2.4/urlmapping.html
