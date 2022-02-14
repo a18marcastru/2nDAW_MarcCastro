@@ -2,21 +2,27 @@ Tutoriales:
 	- MYSQL: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
 	- APACHE: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es
 	- NGINX: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
+	- Lighttpd: https://www.arubacloud.com/tutorial/how-to-install-lighttpd-web-server-on-ubuntu-18-04.aspx
 	- SSL NGINX: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04
 	- SSL APACHE: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-apache-in-ubuntu-18-04
 	- phpmyadmin: https://diarioprogramador.com/como-instalar-phpmyadmin-en-ubuntu-server-20-04/
 	- Apache, MySQL, PHP (LAMP): https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-ubuntu-18-04
-
+	- Autenticación contraseña con Apache: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-18-04
+	Sin configurar en .htacces, se configura en /etc/phpmyadmin/apache.conf
+	- Manual Apache: https://httpd.apache.org/docs/2.4/urlmapping.html
+	
 Comandas:
 	- Comprobar los puertos: sudo netstat -patn
+	- Enlace: ln -s /etc/apache o nginx/sites-available/nombre del archivo /etc/nginx/sites-enabled/
 	- Configurar la conexion a internet: sudo nano /etc/netplan/00-installer-config.yaml
+	- Activar la configuracion IP static: netplan apply
 	Configuracion:
 	# This is the network config written by 'subiquity' 
 	network: 
 	  version: 2 
 	  ethernets: 
             enp0s3: 
-	      addresses: [192.168.210.239/24] 
+	      addresses: [192.168.210.239/24]
 	      gateway4: 192.168.210.1 
 	      nameservers: 
 		addresses: [192.168.210.1, 8.8.8.8]
