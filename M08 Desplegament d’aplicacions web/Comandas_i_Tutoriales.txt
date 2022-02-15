@@ -12,6 +12,7 @@ Tutoriales:
 	- Autenticación contraseña con Apache: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-18-04
 	Sin configurar en .htacces, se configura en /etc/phpmyadmin/apache.conf
 	- Manual Apache: https://httpd.apache.org/docs/2.4/urlmapping.html
+	- Manual Apache .htaccess: https://httpd.apache.org/docs/2.4/es/howto/htaccess.html
 	
 Comandas:
 	- Comprobar los puertos: sudo netstat -patn
