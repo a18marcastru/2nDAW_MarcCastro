@@ -2,7 +2,7 @@
 <script>
 export default {
   props: ['infoGato'],
-  emits: ['incrementar','like','dislike']
+  emits: ['like','dislike']
 }
 </script>
 
