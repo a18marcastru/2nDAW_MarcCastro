@@ -1,19 +1,16 @@
 <template>
   <div>
-    <h1>Welcome to Meteor!</h1>
-    <hello/>
-    <info/>
+    <h1>Chat</h1>
+    <Chat/>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
-import Info from './components/Info.vue'
+import Chat from "./components/Chat.vue"
 
 export default {
   components: {
-    Hello,
-    Info,
+    Chat
   },
 }
 </script>
