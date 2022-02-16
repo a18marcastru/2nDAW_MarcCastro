@@ -1,6 +1,7 @@
 Tutoriales:
 	- MYSQL: https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
 	- APACHE: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-ubuntu-20-04-es
+	Para utilizar un puerto como 8000 hay que configurar en /etc/apache2/ports.conf
 	- NGINX: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04
 	- Lighttpd: https://www.arubacloud.com/tutorial/how-to-install-lighttpd-web-server-on-ubuntu-18-04.aspx
 	- SSL NGINX: https://www.digitalocean.com/community/tutorials/how-to-create-a-self-signed-ssl-certificate-for-nginx-in-ubuntu-18-04
@@ -11,6 +12,7 @@ Tutoriales:
 	- Autenticación contraseña con Apache: https://www.digitalocean.com/community/tutorials/how-to-set-up-password-authentication-with-apache-on-ubuntu-18-04
 	Sin configurar en .htacces, se configura en /etc/phpmyadmin/apache.conf
 	- Manual Apache: https://httpd.apache.org/docs/2.4/urlmapping.html
+	- Manual Apache .htaccess: https://httpd.apache.org/docs/2.4/es/howto/htaccess.html
 	
 Comandas:
 	- Comprobar los puertos: sudo netstat -patn
