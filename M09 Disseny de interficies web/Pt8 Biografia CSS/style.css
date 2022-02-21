@@ -1,0 +1,45 @@
+body {
+    counter-reset: section;
+    box-sizing: border-box;
+}
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+/*El menu este fijado con la imagen*/
+nav {
+    position: sticky;
+    top: 0;
+}
+/*En la etiqueta h1 es para el contador.*/
+h1 {
+    counter-reset: subsection;
+    transition: 3s;
+}
+h1::before {
+    counter-increment: section;
+    content: counter(section) "- ";
+}
+/*Es para evitar que se mueva el texto, darle una animacion al titulo.*/
+article {
+    border: solid 1px white;
+    padding: 20px;
+}
+article:hover {
+    border: solid 1px black;
+}
+article:hover h1 {
+    background-color: gray;
+}
+/*Aqui es para darle forma dependiendo del dispositivo.*/
+@media screen and (max-width: 600px) {
+    img {
+        content: url("./ausias_cara.png");
+    }
+    .container {
+        grid-template-columns: auto;
+    }
+    nav {
+        position: relative;
+    }
+}
