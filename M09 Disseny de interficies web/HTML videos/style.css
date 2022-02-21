@@ -1,0 +1,15 @@
+div {
+    width: 50px;
+    height: 50px;
+}
+video {
+    display: inline-block;
+    transition: transform 2s;
+}
+#circulo {
+    border-radius: 50%;
+    background-color: black;
+}
+#circulo:hover video {
+    transform: rotate(360deg);
+}
