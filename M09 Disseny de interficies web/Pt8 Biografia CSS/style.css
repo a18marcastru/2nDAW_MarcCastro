@@ -7,9 +7,15 @@ body {
     grid-template-columns: 20% 80%;
 }
 /*El menu este fijado con la imagen*/
-nav {
+ol {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
+}
+img {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 15%;
 }
 /*En la etiqueta h1 es para el contador.*/
 h1 {

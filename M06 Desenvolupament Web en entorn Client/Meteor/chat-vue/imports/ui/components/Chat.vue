@@ -9,9 +9,6 @@
 </template>
 
 <script>
-import Links from '../../api/collections/Messages'
-import FormLogin from './FormLogin.vue'
-import FormInput from './FormInput.vue'
 import Messages from './Messages.vue'
 
 export default {
@@ -24,8 +21,8 @@ export default {
     $subscribe: {
       'messages': [],
     },
-    links () {
-      return Messages.find({})
+    messages () {
+      return Messages.find({},{sort: { createdAt: -1} })
     },
   },
   methods: {

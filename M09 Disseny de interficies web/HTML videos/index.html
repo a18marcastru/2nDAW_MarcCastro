@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Video HTML</title>
+    <style>
+        .rotate {
+            transform:rotate(360deg);
+            transition: 3s;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn-girar">Girar</button>
+    <br>
+    <h3>MP4</h3>
+    <video id="video" class="btn" width="320" height="240">
+        <source src="./videos/videos.mp4" type="video/mp4">
+    </video>
+    <button id="btn-play">Play</button>
+    <button id="btn-stop">Stop</button>
+    <br>
+    <button id="btn-girar2">Girar</button>
+    <br>
+    <h3>WEBM</h3>
+    <video id="video2" class="btn" width="320" height="240">
+        <source src="./videos/videos.webm" type="video/webm">
+    </video>
+    <button id="btn-play2">Play</button>
+    <button id="btn-stop2">Stop</button>
+    <script src="main.js"></script>
+</body>
+</html>
