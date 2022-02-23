@@ -14,7 +14,6 @@ function CargarDatos(){
 }
 
 document.addEventListener("DOMContentLoaded",function() {
-    //EL TEU CODI AQUI
    CargarDatos();
 });
 
