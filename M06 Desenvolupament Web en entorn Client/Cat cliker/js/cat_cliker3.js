@@ -9,11 +9,8 @@ var data = {
 };
 
     var model = {
-        init: function(data) {
+        init: function() {
             return data;
-        },
-        nuevoGatoActivo: function(n) {
-            data.catActive = n;
         },
         getGatoActual: function() {
             return data.gatos[data.catActive];
@@ -21,33 +18,30 @@ var data = {
     };
 
     var controller = {
-        funcionXXX: function(noteStr) {
-            view.render();
+        init: function() {
+            let data = model.init();
+            view.init(data);
         },
         cambioDeGato: function(numGato) {
-            model.nuevoGatoActivo(numGato);
+            data.catActive = numGato;
             view.renderGato(model.getGatoActual());
         },
-        init: function() {
-            //datos-model.init();
-            view.init(data);
+        contadorImg: function() {
+            data.gatos[data.catActive].nclicks++; 
+            view.renderGato(model.getGatoActual());
         }
     };
 
     var view = {
         init: function(data) {
             view.renderLista(data);
-            document.getElementById("gato").addEventListener('click', function(){
-                document.getElementById("cont").innerHTML++;
-                data.gatos[data.catActive].nclicks++;
-            });
         },
         renderGato: function(GATO) {
-            document.getElementById("gato").setAttribute("src",GATO.image);
-            document.getElementById("cont").innerHTML = GATO.nclicks;
-            document.getElementById("nom").innerHTML = GATO.name;
+            document.getElementById("catimg").setAttribute("src",GATO.image);
+            document.getElementById("contador").innerHTML = GATO.nclicks;
+            document.getElementById("nombre").innerHTML = GATO.name;
         },
-        renderLista: function(datos){
+        renderLista: function(data){
             var listas = document.getElementById("lista");
             for (let index = 0; index < data.gatos.length; index++) {
                 var li = document.createElement("li");
@@ -56,8 +50,18 @@ var data = {
                 li.appendChild(atri);
                 listas.appendChild(li);
             }
+
+            document.getElementById("lista").addEventListener("click",function(e){
+                controller.cambioDeGato(e.target.getAttribute("id"));
+            });
+
+            document.getElementById("catimg").addEventListener("click",function(e){
+                controller.contadorImg(e.target.getAttribute("id"));
+            });
         }
     };
+
+    controller.init();
 
 /*
 var data = {
