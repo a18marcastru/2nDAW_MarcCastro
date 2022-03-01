@@ -25,9 +25,17 @@ function repintar(e) {
 
     document.addEventListener("keydown", function(event){
         console.log(event.key);
-        if(event.key == "g") {
+        if(event.key == "G") {
             printRatoli1(e);
         }
+        else if(event.key == "B") {
+            printRatoli2(e);
+        }
+        /*else if(event.key == "a") {
+            var elim = document.getElementById("canvas");
+            console.log(elim);
+            elim[0].classList.add('borrar');
+        }*/
     });
 }
 
@@ -85,3 +93,13 @@ function printRatoli1(e) {
     context.fill();
 }
 
+function printRatoli2(e) {
+    posX = e.offsetX;
+    posY = e.offsetY;
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "blue";
+    context.beginPath();
+    context.arc(posX, posY, 19, 1, 13);
+    context.fill();
+}

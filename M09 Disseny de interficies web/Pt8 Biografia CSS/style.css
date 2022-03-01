@@ -15,7 +15,7 @@ ol {
 img {
     position: -webkit-sticky;
     position: sticky;
-    top: 15%;
+    top: 20%;
 }
 /*En la etiqueta h1 es para el contador.*/
 h1 {
@@ -41,6 +41,7 @@ article:hover h1 {
 @media screen and (max-width: 600px) {
     img {
         content: url("./ausias_cara.png");
+        position: relative;
     }
     .container {
         grid-template-columns: auto;
