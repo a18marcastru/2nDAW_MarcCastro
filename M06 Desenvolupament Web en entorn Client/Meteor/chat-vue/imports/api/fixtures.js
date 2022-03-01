@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import Links from './collections/Links.js';
+import Links from './collections/Messages.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty

@@ -1,16 +1,15 @@
 <template>
   <div>
-    <h1>Chat</h1>
-    <Chat/>
+    <info/>
   </div>
 </template>
 
 <script>
-import Chat from "./components/Chat.vue"
+import Info from './components/Info.vue'
 
 export default {
   components: {
-    Chat
+    Info,
   },
 }
 </script>
@@ -19,5 +18,6 @@ export default {
   body {
     font-family: sans-serif;
     padding: 10px;
+    background-image: url("fondo.jpg");
   }
 </style>
