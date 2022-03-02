@@ -33,7 +33,7 @@ export default {
   data() {
     return {
       content: "",
-      usuario:"",
+      usuario: "Anonimo",
       anonimo: true
     }
   },

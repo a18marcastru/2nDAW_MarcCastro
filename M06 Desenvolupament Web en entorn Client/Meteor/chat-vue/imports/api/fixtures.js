@@ -1,9 +1,9 @@
 import { Meteor } from 'meteor/meteor';
-import Links from './collections/Messages.js';
+import Messages from './collections/Messages.js';
 
 Meteor.startup(() => {
   // if the Links collection is empty
-  if (Links.find().count() === 0) {
+  if (Messages.find().count() === 0) {
     const data = [
       {
         title: 'Do the Tutorial',
@@ -27,6 +27,6 @@ Meteor.startup(() => {
       },
     ];
 
-    data.forEach(link => Links.insert(link));
+    data.forEach(link => Messages.insert(link));
   }
 });

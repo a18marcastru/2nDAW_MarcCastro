@@ -1,15 +1,15 @@
 <template>
   <div>
-    <info/>
+    <Chat/>
   </div>
 </template>
 
 <script>
-import Info from './components/Info.vue'
+import Chat from './components/Chat.vue'
 
 export default {
   components: {
-    Info,
+    Chat,
   },
 }
 </script>

@@ -50,3 +50,17 @@ article:hover h1 {
         position: relative;
     }
 }
+.links:hover {
+    animation: tiembla 0.1s infinite;
+}
+@keyframes tiembla {
+    0% {
+        transform: rotateZ(-5deg);
+    }
+    50% {
+        transform: rotateZ(0deg) scale(.8);
+    }
+    100% {
+        transform: rotateZ(5deg);
+    }
+}
