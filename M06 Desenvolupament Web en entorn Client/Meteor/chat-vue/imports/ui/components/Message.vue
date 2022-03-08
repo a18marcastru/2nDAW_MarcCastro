@@ -1,11 +1,16 @@
 <template>
     <div id="mensajes">
-        <p>{{infoMsg.content}}<br><small>{{infoMsg.usuario}}</small><br><br>{{infoMsg.createdAt}}</p>
+        <p>{{infoMsg.content}}<br><small>{{infoMsg.usuario}}</small><br><br>{{horaUltima}}</p>
     </div>
 </template>
 <script>
 export default {
-    props: ['infoMsg']
+    props: ['infoMsg'],
+    computed: {
+        horaUltima() {
+            return moment(this.infoMsg.createdAt).fromNow();
+        }
+    }
 }
 </script>
 <style scoped>

@@ -1,10 +1,9 @@
 <template>
- <div :key="index" 
- v-for="(opcion,index) in encuesta">
-     <button class="btn btn-primary" @click="incrementar(opcion.id)">Voto {{opcion.id}}</button><p>{{opcion.votos}}</p><br>
+<div>
+    <div :key="index" v-for="(opcion, index) in encuesta">
+        <button class="btn btn-primary" @click="incrementar(opcion.id)">Voto {{opcion.id}}</button><small>{{opcion.votos}}</small>
+    </div>
  </div>
-
- 
 </template>
 
 <script>
@@ -13,7 +12,6 @@
     export default {
         data() {
             return {
-
             }
         },
         components: {
@@ -22,8 +20,8 @@
             $subscribe: {
             'encuesta': [],
             },
-            encuesta () {
-                return Encuesta.find({});
+            encuesta() {
+                return Encuesta.find();
             }
         },
         methods: {
@@ -32,7 +30,6 @@
                 if (error) {
                 alert(error.error)
                 } else {
-
                 }
             });
             }
@@ -41,7 +38,8 @@
 </script>
 
 <style>
-    p {
+    small {
         color: white;
+        margin-left: 5px;
     }
 </style>
