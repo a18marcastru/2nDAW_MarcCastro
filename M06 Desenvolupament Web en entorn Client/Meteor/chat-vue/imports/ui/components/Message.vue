@@ -1,6 +1,6 @@
 <template>
     <div id="mensajes">
-        <p>{{infoMsg.content}}<br><small>{{infoMsg.usuario}}</small><br><br>{{horaUltima}}</p>
+        <p>Mensaje: {{infoMsg.content}}<br><small>Usuario: {{infoMsg.usuario}}</small><br><br>{{horaUltima}}</p>
     </div>
 </template>
 <script>

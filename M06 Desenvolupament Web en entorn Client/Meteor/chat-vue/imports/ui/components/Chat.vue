@@ -1,26 +1,26 @@
 <template>
   <div>
-<h2>Encuesta! ✉️</h2>
+    <h2>Encuesta! 🗳️</h2>
 
-  <Encuesta/>
+    <Encuesta/>
 
-  <h2>Chat! ✉️</h2>
-  <div id="anoni">
-    <label>Anonimo</label>
-    <input type="checkbox" v-model="anonimo"/>
-  </div>
-  <div v-if="!anonimo">
-    <input class="mens" type="text" v-model="usuario" name="title" placeholder="Usuario" size="40" required>
-  </div>
+    <h2>Chat! ✉️</h2>
+    <div id="anoni">
+      <label>Anonimo</label>
+      <input type="checkbox" v-model="anonimo"/>
+    </div>
+    <div v-if="!anonimo">
+      <input class="mens" type="text" v-model="usuario" name="title" placeholder="Usuario" size="40" required>
+    </div>
     <br>
     <input class="mens" type="text" v-model="content" name="title" placeholder="Mensaje" size="40" required>
     <br>
     <input class="mens" type="submit" name="submit" @click="enviarMensaje()" value="ENVIAR">
-          
-          <Mens :infoMsg="msg" 
-          :key="index" 
-          v-for="(msg,index) in messages"/>
-
+              
+        <Mens :infoMsg="msg" 
+        :key="index" 
+        v-for="(msg,index) in messages"/>
+        
   </div>
 </template>
 
