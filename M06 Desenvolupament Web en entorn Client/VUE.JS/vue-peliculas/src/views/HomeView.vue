@@ -1,9 +1,14 @@
-<script setup lang="ts">
-import TheWelcome from "@/components/TheWelcome.vue";
+<script>
+import Busqueda from "@/components/Busqueda.vue";
+export default {
+  components: {
+    Busqueda
+  }
+}
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <Busqueda/>
   </main>
 </template>

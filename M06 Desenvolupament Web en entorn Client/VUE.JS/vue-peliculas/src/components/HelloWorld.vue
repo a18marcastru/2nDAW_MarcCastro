@@ -1,11 +1,10 @@
-<script>
-export default {
-  data() {
-    return {
-    }
+<script setup>
+defineProps({
+  msg: {
+    type: String,
+    required: true,
   },
-  props: ['msg']
-}
+});
 </script>
 
 <template>
@@ -14,7 +13,7 @@ export default {
     <h3>
       You’ve successfully created a project with
       <a target="_blank" href="https://vitejs.dev/">Vite</a> +
-      <a target="_blank" href="https://vuejs.org/">Vue 3</a>. What's next?
+      <a target="_blank" href="https://vuejs.org/">Vue 3</a>.
     </h3>
   </div>
 </template>
