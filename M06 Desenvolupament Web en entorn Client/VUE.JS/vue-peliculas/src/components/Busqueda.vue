@@ -6,7 +6,7 @@
     </div>
 
     <div id="container">
-        <Pelicula  :infoPeliFav="pel"
+        <Pelicula  :infoPeli="pel"
         v-for="pel in datos">
         </Pelicula>
     </div>
