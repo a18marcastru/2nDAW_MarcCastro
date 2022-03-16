@@ -6,18 +6,14 @@
     </div>
 
     <div id="container">
-        <div id="peliculas" v-for="pel in datos">
-            <img :src="pel.Poster"/>
-            <ul>
-                <li>{{pel.Title}}</li>
-                <li>{{pel.Year}}</li>
-            </ul>
-            <input type="checkbox" @click="favorito()">Pelicula Favorita
-        </div>
+        <Pelicula  :infoPeliFav="pel"
+        v-for="pel in datos">
+        </Pelicula>
     </div>
 </template>
 
 <script>
+import Pelicula from './Pelicula.vue';
 export default {
   data() {
     return {
@@ -26,6 +22,7 @@ export default {
     }
   },
   components: {
+      Pelicula
   },
   methods: {
     enviarNombre() {
@@ -41,12 +38,9 @@ export default {
         fetch(`https://www.omdbapi.com/?apikey=35bd8c4e&s=${this.nombre}`)
         .then(res => res.json())
         .then((data) => {
-            console.log(data.Search);
             this.datos = data.Search;
+            console.log(this.datos);
         });
-    },
-    favorito() {
-        
     }
   },
 }
@@ -56,10 +50,5 @@ export default {
     #container {
         display: grid;
         grid-template-columns: auto auto;
-    }
-    #peliculas {
-        margin-right: 5px;
-        border: 5px solid red;
-        margin-bottom: 5px;
     }
 </style>
