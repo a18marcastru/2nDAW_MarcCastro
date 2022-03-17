@@ -1,10 +1,12 @@
 <template>
-    <div>
+<br>
+    <div id="vista">
         <h1>Buscar peliculas</h1>
-        <input v-model="nombre" type="text" id="nombre">
+        <input v-model="nombre" type="text" id="nombre" size="40">
+        <br><br>
         <button class="btn btn-primary" @click="enviarNombre()">Buscar</button>
     </div>
-
+    <br>
     <div id="container">
         <Pelicula  :infoPeli="pel"
         v-for="pel in datos">
@@ -49,6 +51,16 @@ export default {
 <style>
     #container {
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
+    }
+    #peliculas {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    #vista {
+      text-align: center;
+    }
+    h1 {
+      color: white;
     }
 </style>

@@ -11,7 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
       width="125"
       height="125"
     />
-
+    <br>
     <div class="wrapper">
       <nav>
         <RouterLink id="bus" to="/">Busqueda</RouterLink>
@@ -25,6 +25,9 @@ import { RouterLink, RouterView } from "vue-router";
 
 <style>
 @import "@/assets/base.css";
+.wrapper {
+  text-align: center;
+}
 #bus {
   border: 2px solid white;
   background-color: white;
@@ -40,5 +43,10 @@ import { RouterLink, RouterView } from "vue-router";
   margin-right: 5px;
   margin-left: 5px;
   text-decoration: none;
+}
+img {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
 }
 </style>
