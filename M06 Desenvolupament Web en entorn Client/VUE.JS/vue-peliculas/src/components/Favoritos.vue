@@ -1,19 +1,19 @@
+<!-- Favoritos.vue -->
 <template>
     <br>
-    <h1 id="titulo">Peliculas Favoritas</h1>
+    <h1 id="titulo">Peliculas favoritas</h1>
     <div id="container">
         <div id="peliculas" v-for="pel in datos">
             <img :src="pel.poster"/>
-            <ul>
-                <li>{{pel.title}}</li>
-                <li>{{pel.year}}</li>
-            </ul>
-            <input type="button" @click="anadlike(pel.id,pel.like)" value="Like"/>
-            <label>{{pel.like}}</label>
-            <input id="dis" type="button" @click="anaddislike(pel.id,pel.dislike)" value="Dislike"/>
-            <label>{{pel.dislike}}</label>
+            <h1>{{pel.title}}</h1>
+            <h2>{{pel.year}}</h2>
+            <h2>{{pel.type}}</h2>
+            <button @click="anlike(pel.id,pel.like)">Like</button>
+            <p>{{pel.like}}</p>
+            <button id="dis" @click="andislike(pel.id,pel.dislike)">Dislike</button>
+            <p>{{pel.dislike}}</p>
             <br>
-            <input type="button" @click="eliminar(pel.id)" value="Eliminar">
+            <button @click="eliminar(pel.id)">Eliminar</button>
         </div>
     </div>
 </template>
@@ -39,7 +39,7 @@
                     this.actualizarDatos();
                 });
             },
-            anadlike(id,like) {
+            anlike(id,like) {
                 console.log(id)
                 like++;
                 const newlike = {
@@ -48,15 +48,15 @@
                 fetch(`http://peliculas.a18marcastru.alumnes.inspedralbes.cat/api.php/records/favoritas/${id}`, {
                     method: 'PUT',
                     headers: {
-                    'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+                    'Content-type': 'application/json; charset=UTF-8' 
                     },
-                    body: JSON.stringify(newlike) // We send data in JSON format
+                    body: JSON.stringify(newlike)
                 }).then(res => res.json())
                 .then((data) => {
                     this.actualizarDatos();
                 });
             },
-            anaddislike(id,dislike) {
+            andislike(id,dislike) {
                 console.log(id)
                 dislike++;
                 const newdislike = {
@@ -65,9 +65,9 @@
                 fetch(`http://peliculas.a18marcastru.alumnes.inspedralbes.cat/api.php/records/favoritas/${id}`, {
                     method: 'PUT',
                     headers: {
-                    'Content-type': 'application/json; charset=UTF-8' // Indicates the content 
+                    'Content-type': 'application/json; charset=UTF-8'
                     },
-                    body: JSON.stringify(newdislike) // We send data in JSON format
+                    body: JSON.stringify(newdislike)
                 }).then(res => res.json())
                 .then((data) => {
                     this.actualizarDatos();
@@ -93,7 +93,7 @@
     #dis {
         margin-left: 5px;
     }
-    label {
+    p {
         color: white;
     }
     li {

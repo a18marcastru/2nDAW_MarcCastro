@@ -1,3 +1,4 @@
+<!-- Busqueda.vue -->
 <template>
 <br>
     <div id="vista">
@@ -28,15 +29,6 @@ export default {
   },
   methods: {
     enviarNombre() {
-        // var e = this
-        // fetch(`https://www.omdbapi.com/?apikey=35bd8c4e&s=${e.nombre}`)
-        // .then(function(res){
-        //     return res.json();
-        // })
-        // .then(function(data) {
-        //     console.log(data.Search);
-        //     e.datos = data.Search;
-        // });
         fetch(`https://www.omdbapi.com/?apikey=35bd8c4e&s=${this.nombre}`)
         .then(res => res.json())
         .then((data) => {
@@ -50,8 +42,8 @@ export default {
 
 <style>
     #container {
-        display: grid;
-        grid-template-columns: auto auto auto;
+      display: grid;
+      grid-template-columns: auto auto auto;
     }
     #peliculas {
       text-align: center;
@@ -59,8 +51,5 @@ export default {
     }
     #vista {
       text-align: center;
-    }
-    h1 {
-      color: white;
     }
 </style>

@@ -32,12 +32,11 @@ export default {
 
 <template>
     <div id="peliculas">
-       <img :src="infoPeli.Poster"/>
-        <ul>
-            <li>{{infoPeli.Title}}</li>
-            <li>{{infoPeli.Year}}</li>
-        </ul>
+        <img :src="infoPeli.Poster"/>
+        <h1>{{infoPeli.Title}}</h1>
+        <h2>{{infoPeli.Year}}</h2>
+        <h2>{{infoPeli.Type}}</h2>
         <button v-if="!anadir" type="button" @click="favorito()">Añadir</button>
-        <label v-if="anadir" for="">Ya esta añadido!</label>
+        <p v-if="anadir" for="">Ya esta añadido!</p>
     </div>
 </template>

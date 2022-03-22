@@ -1,5 +1,5 @@
 <script>
-import { RouterLink, RouterView } from "vue-router";
+  import { RouterLink, RouterView } from "vue-router";
 </script>
 
 <template>
@@ -14,8 +14,8 @@ import { RouterLink, RouterView } from "vue-router";
     <br>
     <div class="wrapper">
       <nav>
-        <RouterLink id="bus" to="/">Busqueda</RouterLink>
-        <RouterLink id="favo" to="/fav">Peliculas favoritas</RouterLink>
+        <button><RouterLink class="btn" to="/">Busqueda</RouterLink></button>
+        <button><RouterLink class="btn" to="/fav">Favoritas</RouterLink></button>
       </nav>
     </div>
   </header>
@@ -28,25 +28,29 @@ import { RouterLink, RouterView } from "vue-router";
 .wrapper {
   text-align: center;
 }
-#bus {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
-  margin-right: 5px;
-  margin-left: 5px;
+.btn {
   text-decoration: none;
+  color: black;
 }
-#favo {
-  border: 2px solid white;
-  background-color: white;
-  color: black;
-  margin-right: 5px;
-  margin-left: 5px;
-  text-decoration: none;
+h1 {
+  color: white;
+}
+h2 {
+  color: white;
 }
 img {
   display:block;
   margin-left: auto;
   margin-right: auto;
+}
+button {
+  border: 0px;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 5px;
+  background-color: #FFA500;
+}
+body {
+  background-image: url("fondo.jpg");
 }
 </style>
