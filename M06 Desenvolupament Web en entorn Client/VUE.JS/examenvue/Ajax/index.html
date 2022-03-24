@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen AJAX</title>
+    <style>
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Calculadora AJAX</h1>
+        <h2>A</h2>
+        <input type="text" id="A1" value="">
+        <h2>B</h2>
+        <input type="text" id="B2" value="">
+        <br>
+        <br>
+        <select name="opciones" id="opciones" >
+            <option value="suma">A+B</option>
+            <option value="resta">A-B</option>
+            <option value="mult">A*B</option>
+        </select>
+        <br>
+        <br>
+        <button id="enviar">Clacula!</button>
+        <br>
+        <br>
+        <textarea cols="40" rows="5" id="resultado" value=""></textarea>
+        <br><br>
+        <img hidden src="./loading.gif" id="loading" height="350px"></img>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
