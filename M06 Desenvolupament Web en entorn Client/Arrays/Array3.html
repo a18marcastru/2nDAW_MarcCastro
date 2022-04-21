@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise: Reduce</title>
+</head>
+<body>
+    
+    <script>
+        //1
+        function extractValue(arr, key) {
+            return arr.reduce((acc, nextValue) => {
+                acc.push(nextValue[key]);
+                return acc;
+            },[]);
+        }
+
+        var arr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}]
+        resp = extractValue(arr,'name') // ['Elie', 'Tim', 'Matt', 'Colt']
+        console.log(resp);
+
+        //2
+        function vowelCount(str) {
+            str = str.toLowerCase();
+            const vowels = 'aeiou';
+            return str.split('').reduce((acc, nextValue) => {
+                if(vowels.indexOf(nextValue) !== -1){
+                    if(acc[nextValue]){
+                        acc[nextValue]++;
+                    }
+                    else {
+                        acc[nextValue] = 1;
+                    }
+                }
+                return acc;
+            }, {});
+        }
+        
+        resp2 = vowelCount('Elie') // {e:2,i:1};
+        console.log(resp2);
+
+        //3
+        function addKeyAndValue(arr, key, value) {
+            return arr.reduce((acc, nextValue, index) => {
+                    acc[index][key] = value;
+                    return acc;
+            }, arr);
+            }
+
+        var arr = [{name: 'Elie'}, {name: 'Tim'}, {name: 'Matt'}, {name: 'Colt'}];
+        resp3 = addKeyAndValue(arr, 'title', 'Instructor') /*
+
+        [
+
+        {title: 'Instructor', name: 'Elie'}, 
+
+        {title: 'Instructor', name: 'Tim'}, 
+
+        {title: 'Instructor', name: 'Matt'}, 
+
+        {title: 'Instructor', name: 'Colt'}
+
+        ]
+
+        */
+        console.log(resp3);
+    </script>
+</body>
+</html>
