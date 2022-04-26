@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici repàs d'objectes i herència</title>
+</head>
+<body>
+    
+    <script>
+
+        //1 
+        class empleado {
+            constructor(n, d, e, c = false, s = 6000) {
+                this.nombre = n;
+                this.dni = d;
+                this.edad = e;
+                this.casado = c;
+                this.salario = s;
+            }
+
+            clasificacion() {
+                if(this.edad <= 21) {
+                    return "Principiante";
+                }
+                else if(this.edad >= 22 && this.edad <= 35) {
+                    return "Intermedio";
+                }
+                else if(this.edad > 35) {
+                    return "Senior";
+                }
+            }
+
+            imprimirDatos() {
+                return `Nombre: ${this.nombre}, DNI: ${this.dni}, Edad: ${this.edad}, Casado: ${this.casado}, Salario: ${this.salario}`;
+            }
+
+            aumentarSalario(pct) {
+                this.salario = this.salario + ((pct/100)*this.salario);
+            }
+        }
+
+        var emp = new empleado('Marc','47993434J',55,false,1400);
+
+        emp.aumentarSalario(20);
+        mensage = emp.clasificacion();
+        mostrar = emp.imprimirDatos();
+        console.log(mostrar + " y se clasifica como " + mensage);
+
+        //2
+        class programador extends empleado {
+            constructor(n, d, e, c = false, s = 6000, lcp = 100, ld = "JS") {
+                emp(n,d,e,c,s);
+                this.lenguajes = Map;
+                this.lineasDeCodigoPorHora = lcp;
+                this.lenguajeDominante = ld;
+            }
+
+            anadirLenguaje() {
+
+            }
+
+            mostrarCompetencias() {
+
+            }
+        }
+        
+        var leng = new programador() 
+    </script>
+</body>
+</html>
