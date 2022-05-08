@@ -6,7 +6,7 @@ function actualizar() {
         datos = data;
         console.log(datos);
         for(let i = 0; i < datos.length; i++){
-            tascas +=`<li num='${i}'>id: ${data[i]._id}, name: ${data[i].name}, completed: ${data[i].completed}, date: ${data[i].created_date}
+            tascas +=`<li num='${i}'>ID: ${data[i]._id}, NAME: ${data[i].name}, COMPLETED: ${data[i].completed}, DATE: ${data[i].created_date}
             <br>
             <button num="${i}" class="btn btn-primary editar">Edit</button>
             <button num="${i}" class="btn btn-danger eliminar">Delete</button>
@@ -55,7 +55,7 @@ document.getElementById("list").addEventListener("click",function(e) {
         console.log(e.target.getAttribute("num"));
         id = e.target.getAttribute("num")
         nombre = datos[e.target.parentElement.getAttribute("num")].name;
-        editor = `<br>name: <input type="text" id="nombre" placeholder="${nombre}" value="${nombre}">
+        editor = `<br>name: <input type="text" id="nombre" value="${nombre}">
         <br>
         completed: <input type="checkbox" id="comp" name="completed" value="1">
         <br>
