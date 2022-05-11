@@ -36,8 +36,7 @@ document.getElementById("btn").addEventListener('click', function(){
     });
 });
 
-
-//ELIMINAR TAREA
+//ELIMINAR TAREA Y EDITAR TAREA
 document.getElementById("list").addEventListener("click",function(e) {
     if(e.target.classList.contains("eliminar")){
         console.log(e.target);
@@ -48,28 +47,11 @@ document.getElementById("list").addEventListener("click",function(e) {
             actualizar();
         });
     }
-   /* else if(e.target.classList.contains("editar")) {
-        console.log(e.target.getAttribute("num"));
-        id = e.target.getAttribute("num")
-        nombre = datos[e.target.parentElement.getAttribute("num")].name;
-        editor = `<br>name: <input type="text" id="nombre" value="${nombre}">
-        <br>
-        completed: <input type="checkbox" id="comp" name="completed" value="1">
-        <br>
-        <button num="${datos[id]._id}" id="sumbit" class="actualizar">Enviar</button>`;
-        document.getElementById("editor").innerHTML = editor;
-    }*/
-});
-
-//EDITAR TAREA
-document.getElementById("list").addEventListener("click",function(e) {
-    if(e.target.classList.contains("task")){
-        console.log("Hola");
-        /*nombre = document.getElementById("nombre").value;
-        completed = (e.target.parentElement.querySelector("[name='completed']").checked == true) ? true : false;
+    else if(e.target.classList.contains("task")){
         _id = e.target.getAttribute("num");
+        console.log(_id);
+        completed = true;
         const tasca = {
-            name: nombre,
             completed: completed
         }
         fetch(`http://localhost:3000/api/todos/${_id}`, {
@@ -82,10 +64,9 @@ document.getElementById("list").addEventListener("click",function(e) {
             actualizar();
         }).catch(function(){
             console.log("Problema!")
-        });*/
+        });
     }
 });
-
 
 document.addEventListener("DOMContentLoaded",function() {
     actualizar();
