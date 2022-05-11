@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercici OO RandomNumbers</title>
+</head>
+<body>
+    <script>
+        class RandomNumbers {
+            constructor() {
+                this.vectorNombres = [];
+                this.sumaNombresImparells;
+                this.vectorTripleImparells
+
+                for(let i = 0;i < 10;i++) {
+                    this.vectorNombres.push(Math.round(Math.random()*(11 - 1) + 1));
+                }
+
+                console.log(this.vectorNombres);
+            }
+            calcular() {
+                this.sumaNombresImparells = this.vectorNombres.filter(i => {return i % 2 != 0}).reduce((acc, i) => {return acc += i});
+                this.vectorTripleImparells = this.vectorNombres.filter(i => {return i % 2 != 0}).map(acc => {return acc * 3});
+                console.log("Suma: " + this.sumaNombresImparells + ", Multiplica: " + this.vectorTripleImparells);
+            }
+        }
+
+        let func = new RandomNumbers();
+        func.calcular()
+    </script>
+</body>
+</html>

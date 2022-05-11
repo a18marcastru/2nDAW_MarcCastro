@@ -84,12 +84,12 @@
                         console.error("El lenguaje ya está guardado");
                     }
                 } else {
-                    console.error("numercion no correcta");
+                    console.error("numeracion no correcta");
                 }
-
             }
 
             mostrarCompetencias() {
+                console.log(this.lenguajes);
                 let htmlStr = "<table border=1>";
 
                 for (let [key, value] of this.lenguajes.entries()) {
@@ -114,6 +114,7 @@
         ana.anadirLenguaje("RUST", 40);
         ana.anadirLenguaje("JAVA", 5);
         ana.anadirLenguaje("PHP", 6);
+        ana.anadirLenguaje("JAVA", 5);
         console.log(ana.imprimirDatos())
         document.write(ana.mostrarCompetencias())
         document.write(ana.imprimirDatos());

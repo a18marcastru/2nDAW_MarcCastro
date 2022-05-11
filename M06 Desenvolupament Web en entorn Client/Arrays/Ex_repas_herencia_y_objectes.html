@@ -41,32 +41,57 @@
             }
         }
 
-        var emp = new empleado('Marc','47993434J',55,false,1400);
-
-        emp.aumentarSalario(20);
-        mensage = emp.clasificacion();
-        mostrar = emp.imprimirDatos();
-        console.log(mostrar + " y se clasifica como " + mensage);
-
         //2
         class programador extends empleado {
             constructor(n, d, e, c = false, s = 6000, lcp = 100, ld = "JS") {
-                emp(n,d,e,c,s);
-                this.lenguajes = Map;
+                super(n,d,e,c,s);
+                this.lenguajes = new Map;
                 this.lineasDeCodigoPorHora = lcp;
                 this.lenguajeDominante = ld;
             }
 
-            anadirLenguaje() {
-
+            anadirLenguaje(lenguaje, puntuacion) {
+                if (puntuacion > 0 && puntuacion < 11) {
+                    if (this.lenguajes.get(lenguaje) == undefined) {
+                        this.lenguajes.set(lenguaje, puntuacion);
+                    } else {
+                        console.log("El lenguaje ya está guardado");
+                    }
+                } else {
+                    console.log("numeracion no correcta");
+                }
             }
 
             mostrarCompetencias() {
+                console.log(this.lenguajes);
+                let htmlStr = "<table border=1>";
 
+                for (let [key, value] of this.lenguajes.entries()) {
+                    htmlStr += `<tr><td>${key}</td><td>${value}</td></tr>`
+                }
+
+                htmlStr += '</table>';
+                return htmlStr;
             }
         }
         
-        var leng = new programador() 
+        let alvaro = new empleado();
+        console.log(alvaro.imprimirDatos());
+        let juan = new empleado("juan Palomo", "1111111A", 25);
+        console.log(juan.imprimirDatos());
+        juan.aumentarSalario(20);
+        console.log(juan.imprimirDatos());
+
+        let ana = new programador("ana", "222222B", 40, true, 40000, 300);
+
+        ana.anadirLenguaje("C", 4);
+        ana.anadirLenguaje("RUST", 40);
+        ana.anadirLenguaje("JAVA", 5);
+        ana.anadirLenguaje("PHP", 6);
+        ana.anadirLenguaje("JAVA", 5);
+        console.log(ana.imprimirDatos())
+        document.write(ana.mostrarCompetencias())
+        document.write(ana.imprimirDatos()); 
     </script>
 </body>
 </html>
