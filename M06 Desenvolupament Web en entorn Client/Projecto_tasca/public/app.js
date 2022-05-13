@@ -10,7 +10,6 @@ function actualizar() {
         for(let i = 0; i < datos.length; i++){
             tascas +=`<li class='task ${data[i].completed? 'done':''}' num='${data[i]._id}'>${data[i].name}  <small>${data[i].created_date}</small> <span class="eliminar">X</span>            
             </li>`; 
-            
         }   
         document.getElementById("list").innerHTML = tascas;
     });
@@ -62,8 +61,6 @@ document.getElementById("list").addEventListener("click",function(e) {
             body: JSON.stringify(tasca)
         }).then(function(){
             actualizar();
-        }).catch(function(){
-            console.log("Problema!")
         });
     }
 });
