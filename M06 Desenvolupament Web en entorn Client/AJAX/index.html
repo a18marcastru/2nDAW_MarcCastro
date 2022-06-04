@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        var numeros="0123456789";
+        var texto = "12323232"
+        num = 0;
+        for(i=0; i<texto.length; i++){
+            if (numeros.indexOf(texto.charAt(i),0)!=-1){
+                num = 1;
+            }
+            else {
+                num = 0
+            }
+        }
+        
+        if(num == 1) {
+            console.log("Esta bien")
+        }
+        else {
+            console.log("No esta bien")
+        }
+
+        var letras="ABCDEFGHYJKLMNÑOPQRSTUVWXYZ abcdefghyjklmnñopqrstuvwxyz";
+        texto = "Hola gente";
+        for(i=0; i<texto.length; i++){
+            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                num = 1;
+            }
+            else {
+                num = 0
+            }
+        }
+
+        if(num == 1) {
+            console.log("Esta bien2")
+        }
+        else {
+            console.log("No esta bien2")
+        }
+
+        letras = 'abcdefghyjklmnopqrstuvwxyz@.';
+        texto = "marc@gmail.com";
+        for(i=0; i<texto.length; i++){
+            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                num = 1;
+            }
+            else {
+                num = 0
+            }
+        }
+
+        if(num == 1) {
+            console.log("Esta bien3")
+        }
+        else {
+            console.log("No esta bien3")
+        }
+
+        letras = 'ABCDEFGHYJKLMNÑOPQRSTUVWXYZ_*?!/()-¿"+"$abcdefghyjklmnopqrstuvwxyz@.';
+        texto = "Marcfv1302*?";
+        for(i=0; i<texto.length; i++){
+            if (letras.indexOf(texto.charAt(i),0)!=-1){
+                num = 1;
+            }
+            else {
+                num = 0
+            }
+        }
+
+        if(num == 1) {
+            console.log("Esta bien4")
+        }
+        else {
+            console.log("No esta bien4")
+        }
+    </script>
+</body>
+</html>
